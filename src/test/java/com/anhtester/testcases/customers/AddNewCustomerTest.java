@@ -1,8 +1,7 @@
-package com.anhtester.testcases.customer;
+package com.anhtester.testcases.customers;
 
 import com.anhtester.common.BaseTest;
 import com.anhtester.pages.Customers.AddNewCustomerPage;
-import com.anhtester.pages.Customers.CustomerPage;
 import com.anhtester.pages.Logins.LoginPage;
 import org.testng.annotations.Test;
 
@@ -46,5 +45,7 @@ public class AddNewCustomerTest extends BaseTest {
         addNewCustomerPage.senkeyTexAddNewCustomer(addNewCustomerPage.inputZipCode,zipCode);
         addNewCustomerPage.selectedItem(addNewCustomerPage.countryId,country);
         addNewCustomerPage.clickCustomer(addNewCustomerPage.btnSave);
+
+        addNewCustomerPage.clickCustomer(addNewCustomerPage.menuCustomers);
     }
 }

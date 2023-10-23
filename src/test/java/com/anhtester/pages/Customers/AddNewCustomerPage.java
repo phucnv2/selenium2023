@@ -1,6 +1,7 @@
 package com.anhtester.pages.Customers;
 
 import com.anhtester.common.BaseTest;
+import com.anhtester.keywords.ActionKeywords;
 import com.anhtester.pages.Logins.LoginPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,10 +12,12 @@ import org.testng.Assert;
 
 import java.time.Duration;
 
-public class AddNewCustomerPage extends LoginPage {
+public class AddNewCustomerPage{
     private WebDriver driver;
+    private WebDriverWait wait;
 
     public By btnAddNewCustomerPage = By.xpath("//a[normalize-space()='New Customer']");
+    public By menuCustomers = By.xpath("//span[normalize-space()='Customers']");
     public By inputCompany = By.xpath("//input[@id='company']");
     public By inputVAT = By.xpath("//input[@id='vat']");
     public By inputPhone = By.xpath("//input[@id='phonenumber']");
@@ -30,8 +33,9 @@ public class AddNewCustomerPage extends LoginPage {
     public By btnSave = By.xpath("//div[@id='profile-save-section']//button[@class='btn btn-primary only-save customer-form-submiter']");
 
     public AddNewCustomerPage(WebDriver driver) {
-        super(driver);
         this.driver = driver;
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        new ActionKeywords(driver); //Truyền giá trị driver vào trong class WebUI
     }
 
     public void clickCustomer(By locator) {
@@ -50,6 +54,5 @@ public class AddNewCustomerPage extends LoginPage {
         Select select = new Select(driver.findElement(locator));
         select.selectByVisibleText(text);
     }
-
 
 }

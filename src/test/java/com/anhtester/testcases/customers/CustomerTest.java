@@ -1,4 +1,4 @@
-package com.anhtester.testcases.customer;
+package com.anhtester.testcases.customers;
 
 import com.anhtester.pages.Customers.CustomerPage;
 import com.anhtester.pages.Logins.LoginPage;
