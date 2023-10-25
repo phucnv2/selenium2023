@@ -24,10 +24,25 @@ public class LoginTest extends BaseTest {
     @Test
     public void loginWithEmailInvalid() {
         loginPage = new LoginPage(driver);
-
         //Gọi các hàm xử lý có sẵn để sử dụng
-        loginPage.loginCRM(ConfigData.EMAIL, ConfigData.PASSWORD);
+        loginPage.loginCRM("adminn@example.com", ConfigData.PASSWORD);
         waitForPageLoaded();
         loginPage.verifyLoginFail();
+    }
+    @Test
+    public void loginWithPasswordInvalid() {
+        loginPage = new LoginPage(driver);
+        //Gọi các hàm xử lý có sẵn để sử dụng
+        loginPage.loginCRM(ConfigData.EMAIL, "1234567");
+        waitForPageLoaded();
+        loginPage.verifyLoginFail();
+    }
+    @Test
+    public void loginWithEmailPasswordEmpty() {
+        loginPage = new LoginPage(driver);
+        //Gọi các hàm xử lý có sẵn để sử dụng
+        loginPage.loginCRM("", "");
+        waitForPageLoaded();
+        loginPage.verifyLoginEmailPasswordEmpty();
     }
 }

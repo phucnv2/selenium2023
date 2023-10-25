@@ -21,6 +21,8 @@ public class LoginPage {
     private By inputPassword = By.xpath("//input[@id='password']");
     private By buttonLogin = By.xpath("//button[normalize-space()='Login']");
     private By errorMessage = By.xpath("//div[@id='alerts']");
+    private By errorMessageEmailNull = By.xpath("//div[normalize-space()='The Email Address field is required.']");
+    private By errorMessagePasswordNull = By.xpath("//div[normalize-space()='The Password field is required.']");
 
     //Khai báo hàm xây dựng, để truyền driver từ bên ngoài vào chính class này sử dụng
     public LoginPage(WebDriver driver) {
@@ -51,15 +53,19 @@ public class LoginPage {
     public void verifyLoginFail(){
         Assert.assertTrue(driver.getCurrentUrl().contains("authentication"), "FAIL. Không còn ở trang Login");
         Assert.assertTrue(driver.findElement(errorMessage).isDisplayed(), "Error message NOT displays");
-        Assert.assertEquals(driver.findElement(errorMessage).getText(), "123Invalid email or password", "Content of error massage NOT match.");
+        Assert.assertEquals(driver.findElement(errorMessage).getText(), "Invalid email or password", "Content of error massage NOT match.");
+    }
+    public void verifyLoginEmailPasswordEmpty(){
+        Assert.assertTrue(driver.getCurrentUrl().contains("authentication"), "FAIL. Không còn ở trang Login");
+        Assert.assertTrue(driver.findElement(errorMessagePasswordNull).isDisplayed(), "Error message NOT displays");
+        Assert.assertTrue(driver.findElement(errorMessageEmailNull).isDisplayed(), "Error message NOT displays");
+        Assert.assertEquals(driver.findElement(errorMessagePasswordNull).getText(), "The Password field is required.", "Content of error massage NOT match.");
+        Assert.assertEquals(driver.findElement(errorMessageEmailNull).getText(), "The Email Address field is required.", "Content of error massage NOT match.");
     }
 
     //Các hàm xử lý cho chính trang này
     public DashboardPage loginCRM(String email, String password) {
         driver.get(ConfigData.URL); //Gọi từ class ConfigData dạng biến static
-//        driver.findElement(inputEmail).sendKeys(email);
-//        driver.findElement(inputPassword).sendKeys(password);
-//        driver.findElement(buttonLogin).click();
         setEmail(email);
         setPassword(password);
         clickLoginButton();
