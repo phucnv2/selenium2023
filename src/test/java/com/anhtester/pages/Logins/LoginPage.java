@@ -1,6 +1,7 @@
 package com.anhtester.pages.Logins;
 
 import com.anhtester.constants.ConfigData;
+import com.anhtester.keywords.ActionKeywords;
 import com.anhtester.pages.Dashboard.DashboardPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +10,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.time.Duration;
+
+import static com.anhtester.keywords.ActionKeywords.*;
 
 public class LoginPage {
     //Khai báo driver cục bộ trong chính class này
@@ -29,21 +32,19 @@ public class LoginPage {
         this.driver = driver;
         //driver = _driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        new ActionKeywords(driver);
     }
 
     private void setEmail(String email) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(inputEmail));
-        driver.findElement(inputEmail).sendKeys(email);
+
     }
 
     private void setPassword(String password) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(inputPassword));
-        driver.findElement(inputPassword).sendKeys(password);
+        setText(inputPassword,password);
     }
 
     private void clickLoginButton() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(buttonLogin));
-        driver.findElement(buttonLogin).click();
+        clickElement(buttonLogin);
     }
 
     public void verifyLoginSuccess(){
@@ -65,10 +66,12 @@ public class LoginPage {
 
     //Các hàm xử lý cho chính trang này
     public DashboardPage loginCRM(String email, String password) {
-        driver.get(ConfigData.URL); //Gọi từ class ConfigData dạng biến static
-        setEmail(email);
-        setPassword(password);
-        clickLoginButton();
+        openURL(ConfigData.URL);
+        waitForPageLoaded();
+        setText(inputEmail,email);
+        setText(inputPassword,password);
+        sleep(5);
+        clickElement(buttonLogin);
         return new DashboardPage(driver);
     }
 }

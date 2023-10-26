@@ -63,9 +63,9 @@ public class ActionKeywords {
     }
 
     public static void clickElement(By by) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(by));
-        driver.findElement(by).click();
+        waitForElementClickable(by);
+        sleep(STEP_TIME);
+        getWebElement(by).click();
         logConsole("Click on element " + by);
     }
 
