@@ -36,7 +36,6 @@ public class DashboardPage {
     public CustomerPage clickMenuCustomers(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(menuCustomers));
         driver.findElement(menuCustomers).click();
-
         return new CustomerPage(driver);
     }
 

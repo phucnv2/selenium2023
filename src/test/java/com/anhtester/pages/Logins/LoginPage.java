@@ -36,7 +36,7 @@ public class LoginPage {
     }
 
     private void setEmail(String email) {
-
+        setText(inputEmail,email);
     }
 
     private void setPassword(String password) {
@@ -48,30 +48,29 @@ public class LoginPage {
     }
 
     public void verifyLoginSuccess(){
-        Assert.assertFalse(driver.getCurrentUrl().contains("authentication"), "FAIL. Vẫn đang ở trang Login");
+        Assert.assertFalse(getCurrentUrl("authentication"), "FAIL. Vẫn đang ở trang Login");
     }
 
     public void verifyLoginFail(){
-        Assert.assertTrue(driver.getCurrentUrl().contains("authentication"), "FAIL. Không còn ở trang Login");
-        Assert.assertTrue(driver.findElement(errorMessage).isDisplayed(), "Error message NOT displays");
-        Assert.assertEquals(driver.findElement(errorMessage).getText(), "Invalid email or password", "Content of error massage NOT match.");
+        Assert.assertTrue(getCurrentUrl("authentication"), "FAIL. Không còn ở trang Login");
+        Assert.assertTrue(isDisplayed(errorMessage), "Error message NOT displays");
+        Assert.assertEquals(isDisplayed(errorMessage), "Invalid email or password", "Content of error massage NOT match.");
     }
     public void verifyLoginEmailPasswordEmpty(){
-        Assert.assertTrue(driver.getCurrentUrl().contains("authentication"), "FAIL. Không còn ở trang Login");
-        Assert.assertTrue(driver.findElement(errorMessagePasswordNull).isDisplayed(), "Error message NOT displays");
-        Assert.assertTrue(driver.findElement(errorMessageEmailNull).isDisplayed(), "Error message NOT displays");
-        Assert.assertEquals(driver.findElement(errorMessagePasswordNull).getText(), "The Password field is required.", "Content of error massage NOT match.");
-        Assert.assertEquals(driver.findElement(errorMessageEmailNull).getText(), "The Email Address field is required.", "Content of error massage NOT match.");
+        Assert.assertTrue(getCurrentUrl("authentication"), "FAIL. Không còn ở trang Login");
+        Assert.assertTrue(isDisplayed(errorMessagePasswordNull), "Error message NOT displays");
+        Assert.assertTrue(isDisplayed(errorMessageEmailNull), "Error message NOT displays");
+        Assert.assertEquals(getElementText(errorMessagePasswordNull), "The Password field is required.", "Content of error massage NOT match.");
+        Assert.assertEquals(getElementText(errorMessageEmailNull), "The Email Address field is required.", "Content of error massage NOT match.");
     }
 
     //Các hàm xử lý cho chính trang này
     public DashboardPage loginCRM(String email, String password) {
         openURL(ConfigData.URL);
         waitForPageLoaded();
-        setText(inputEmail,email);
-        setText(inputPassword,password);
-        sleep(5);
-        clickElement(buttonLogin);
+        setEmail(email);
+        setPassword(password);
+        clickLoginButton();
         return new DashboardPage(driver);
     }
 }

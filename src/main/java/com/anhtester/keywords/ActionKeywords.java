@@ -65,13 +65,20 @@ public class ActionKeywords {
     public static void clickElement(By by) {
         waitForElementClickable(by);
         sleep(STEP_TIME);
+        highLightElement(by);
         getWebElement(by).click();
         logConsole("Click on element " + by);
     }
+    public static boolean isDisplayed(By by) {
+        waitForElementVisible(by);
+        driver.findElement(by).isDisplayed();
+        logConsole("Text show " + by);
+        return true;
+    }
 
     public static void setText(By by, String text) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+        waitForElementVisible(by);
+        highLightElement(by);
         driver.findElement(by).sendKeys(text);
         logConsole("Set text " + text + " on input " + by);
     }
@@ -81,6 +88,12 @@ public class ActionKeywords {
         String text = driver.findElement(by).getText();
         logConsole("Get text of element " + by + " is: " + text);
         return text;
+    }
+    public static boolean getCurrentUrl(String textUrl) {
+        boolean text = driver.getCurrentUrl().contains(textUrl);
+        logConsole("Get current URL is: " + text);
+        return false;
+
     }
 
     public static String getElementAttribute(By by, String attributeName) {

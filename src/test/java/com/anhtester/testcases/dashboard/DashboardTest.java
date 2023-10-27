@@ -1,5 +1,6 @@
 package com.anhtester.testcases.dashboard;
 
+import com.anhtester.constants.ConfigData;
 import com.anhtester.pages.Customers.CustomerPage;
 import com.anhtester.pages.Dashboard.DashboardPage;
 import com.anhtester.pages.Logins.LoginPage;
@@ -15,13 +16,13 @@ public class DashboardTest extends BaseTest {
     @Test
     public void testOpenCustomerPage(){
         //Login
-//        loginPage = new LoginPage(driver);
-//        dashboardPage = loginPage.loginCRM(ConfigData.EMAIL, ConfigData.PASSWORD);
-//        loginPage.verifyLoginSuccess();
-//
-//        //Click menu Customer
-//        customerPage = dashboardPage.clickMenuCustomers();
-//        customerPage.verifyHeaderCustomerPage();
+loginPage = new LoginPage(driver);
+dashboardPage = loginPage.loginCRM(ConfigData.EMAIL, ConfigData.PASSWORD);
+loginPage.verifyLoginSuccess();
+
+//Click menu Customer
+customerPage = dashboardPage.clickMenuCustomers();
+customerPage.verifyCustomerPage();
 
     }
 
