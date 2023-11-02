@@ -76,6 +76,17 @@ public class ActionKeywords {
         return true;
     }
 
+    public static boolean isSelected(By by){
+//        waitForElementVisible(by);
+        Boolean isSelected = driver.findElement(by).isSelected();
+
+        if(isSelected == false)
+        {
+            clickElement(by);
+        }
+        return true;
+    }
+
     public static void setText(By by, String text) {
         waitForElementVisible(by);
         highLightElement(by);

@@ -26,6 +26,8 @@ public class LoginPage {
     private By errorMessage = By.xpath("//div[@id='alerts']");
     private By errorMessageEmailNull = By.xpath("//div[normalize-space()='The Email Address field is required.']");
     private By errorMessagePasswordNull = By.xpath("//div[normalize-space()='The Password field is required.']");
+    private By checkBox = By.xpath("//div[@class='checkbox checkbox-inline']//input[@id='remember']");
+    private By checkBoxText = By.xpath("//label[normalize-space()='Remember me']");
 
     //Khai báo hàm xây dựng, để truyền driver từ bên ngoài vào chính class này sử dụng
     public LoginPage(WebDriver driver) {
@@ -46,6 +48,9 @@ public class LoginPage {
     private void clickLoginButton() {
         clickElement(buttonLogin);
     }
+    public void checkCheckbox(){
+        clickElement(checkBoxText);
+    }
 
     public void verifyLoginSuccess(){
         Assert.assertFalse(getCurrentUrl("authentication"), "FAIL. Vẫn đang ở trang Login");
@@ -63,6 +68,14 @@ public class LoginPage {
         Assert.assertEquals(getElementText(errorMessagePasswordNull), "The Password field is required.", "Content of error massage NOT match.");
         Assert.assertEquals(getElementText(errorMessageEmailNull), "The Email Address field is required.", "Content of error massage NOT match.");
     }
+    public void verifyEmailNull(){
+        Assert.assertTrue(isDisplayed(errorMessageEmailNull),"Error messsage NOT displays");
+        Assert.assertEquals(getElementText(errorMessageEmailNull),"The Email Address field is required.","Content of error massage NOT match.");
+    }
+    public void verifyPasswordNull(){
+        Assert.assertTrue(isDisplayed(errorMessagePasswordNull),"Error message NOT display");
+        Assert.assertEquals(getElementText(errorMessagePasswordNull),"The Password field is required.","Content of error massage NOT match.");
+    }
 
     //Các hàm xử lý cho chính trang này
     public DashboardPage loginCRM(String email, String password) {
@@ -72,5 +85,9 @@ public class LoginPage {
         setPassword(password);
         clickLoginButton();
         return new DashboardPage(driver);
+    }
+    public void loginPage(){
+        openURL(ConfigData.URL);
+        waitForPageLoaded();
     }
 }

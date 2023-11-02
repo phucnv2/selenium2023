@@ -45,4 +45,26 @@ public class LoginTest extends BaseTest {
         waitForPageLoaded();
         loginPage.verifyLoginEmailPasswordEmpty();
     }
+    @Test
+    public void loginWithEmailEmpty() {
+        loginPage = new LoginPage(driver);
+        //Gọi các hàm xử lý có sẵn để sử dụng
+        loginPage.loginCRM("", ConfigData.PASSWORD);
+        waitForPageLoaded();
+        loginPage.verifyEmailNull();
+    }
+    @Test
+    public void loginWithPasswordEmpty() {
+        loginPage = new LoginPage(driver);
+        //Gọi các hàm xử lý có sẵn để sử dụng
+        loginPage.loginCRM(ConfigData.EMAIL, "");
+        waitForPageLoaded();
+        loginPage.verifyPasswordNull();
+    }
+    @Test
+    public void chooseCheckboxRemenber(){
+        loginPage = new LoginPage(driver);
+        loginPage.loginPage();
+        loginPage.checkCheckbox();
+    }
 }
