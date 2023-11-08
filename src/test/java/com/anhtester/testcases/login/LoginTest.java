@@ -11,7 +11,7 @@ public class LoginTest extends BaseTest {
     LoginPage loginPage;
     DashboardPage dashboardPage;
 
-    @Test
+    @Test(priority = 7)
     public void loginSuccess() {
         loginPage = new LoginPage(driver);
         //Gọi các hàm xử lý có sẵn để sử dụng
@@ -21,23 +21,21 @@ public class LoginTest extends BaseTest {
         dashboardPage.clickMenuCustomers();
     }
 
-    @Test
+    @Test(priority = 1)
     public void loginWithEmailInvalid() {
-        loginPage = new LoginPage(driver);
-        //Gọi các hàm xử lý có sẵn để sử dụng
+        loginPage = new LoginPage(driver);        //Gọi các hàm xử lý có sẵn để sử dụng
         loginPage.loginCRM("adminn@example.com", ConfigData.PASSWORD);
         waitForPageLoaded();
         loginPage.verifyLoginFail();
     }
-    @Test
+    @Test(priority = 2)
     public void loginWithPasswordInvalid() {
-        loginPage = new LoginPage(driver);
-        //Gọi các hàm xử lý có sẵn để sử dụng
+        loginPage = new LoginPage(driver);        //Gọi các hàm xử lý có sẵn để sử dụng
         loginPage.loginCRM(ConfigData.EMAIL, "1234567");
         waitForPageLoaded();
         loginPage.verifyLoginFail();
     }
-    @Test
+    @Test(priority = 3)
     public void loginWithEmailPasswordEmpty() {
         loginPage = new LoginPage(driver);
         //Gọi các hàm xử lý có sẵn để sử dụng
@@ -45,7 +43,7 @@ public class LoginTest extends BaseTest {
         waitForPageLoaded();
         loginPage.verifyLoginEmailPasswordEmpty();
     }
-    @Test
+    @Test(priority = 4)
     public void loginWithEmailEmpty() {
         loginPage = new LoginPage(driver);
         //Gọi các hàm xử lý có sẵn để sử dụng
@@ -53,7 +51,7 @@ public class LoginTest extends BaseTest {
         waitForPageLoaded();
         loginPage.verifyEmailNull();
     }
-    @Test
+    @Test(priority = 5)
     public void loginWithPasswordEmpty() {
         loginPage = new LoginPage(driver);
         //Gọi các hàm xử lý có sẵn để sử dụng
@@ -61,7 +59,7 @@ public class LoginTest extends BaseTest {
         waitForPageLoaded();
         loginPage.verifyPasswordNull();
     }
-    @Test
+    @Test(priority = 6)
     public void chooseCheckboxRemenber(){
         loginPage = new LoginPage(driver);
         loginPage.loginPage();

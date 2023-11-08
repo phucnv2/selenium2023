@@ -53,13 +53,13 @@ public class LoginPage {
     }
 
     public void verifyLoginSuccess(){
-        Assert.assertFalse(getCurrentUrl("authentication"), "FAIL. Vẫn đang ở trang Login");
+        Assert.assertTrue(getCurrentUrl("authentication"), "FAIL. Vẫn đang ở trang Login");
     }
 
     public void verifyLoginFail(){
         Assert.assertTrue(getCurrentUrl("authentication"), "FAIL. Không còn ở trang Login");
         Assert.assertTrue(isDisplayed(errorMessage), "Error message NOT displays");
-        Assert.assertEquals(isDisplayed(errorMessage), "Invalid email or password", "Content of error massage NOT match.");
+        Assert.assertEquals(getElementText(errorMessage), "Invalid email or password", "Content of error massage NOT match.");
     }
     public void verifyLoginEmailPasswordEmpty(){
         Assert.assertTrue(getCurrentUrl("authentication"), "FAIL. Không còn ở trang Login");

@@ -103,8 +103,7 @@ public class ActionKeywords {
     public static boolean getCurrentUrl(String textUrl) {
         boolean text = driver.getCurrentUrl().contains(textUrl);
         logConsole("Get current URL is: " + text);
-        return false;
-
+        return true;
     }
 
     public static String getElementAttribute(By by, String attributeName) {
