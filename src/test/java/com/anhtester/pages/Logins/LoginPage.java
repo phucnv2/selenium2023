@@ -1,21 +1,14 @@
 package com.anhtester.pages.Logins;
 
 import com.anhtester.constants.ConfigData;
-import com.anhtester.keywords.ActionKeywords;
 import com.anhtester.pages.Dashboard.DashboardPage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
-import java.time.Duration;
-
 import static com.anhtester.keywords.ActionKeywords.*;
 
 public class LoginPage {
     //Khai báo driver cục bộ trong chính class này
-    private WebDriver driver;
     private WebDriverWait wait;
 
     //Khai báo các element dạng đối tượng By (phương thức tìm kiếm)
@@ -30,12 +23,6 @@ public class LoginPage {
     private By checkBoxText = By.xpath("//label[normalize-space()='Remember me']");
 
     //Khai báo hàm xây dựng, để truyền driver từ bên ngoài vào chính class này sử dụng
-    public LoginPage(WebDriver driver) {
-        this.driver = driver;
-        //driver = _driver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        new ActionKeywords(driver);
-    }
 
     private void setEmail(String email) {
         setText(inputEmail,email);
@@ -84,7 +71,7 @@ public class LoginPage {
         setEmail(email);
         setPassword(password);
         clickLoginButton();
-        return new DashboardPage(driver);
+        return new DashboardPage();
     }
     public void loginPage(){
         openURL(ConfigData.URL);

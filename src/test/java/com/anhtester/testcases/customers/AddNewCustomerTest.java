@@ -24,10 +24,9 @@ public class AddNewCustomerTest extends BaseTest {
 
     @Test
     public void addNewCustomer() {
-        addNewCustomerPage = new AddNewCustomerPage(driver);
-        loginPage = new LoginPage(driver);
+        addNewCustomerPage = new AddNewCustomerPage();
+        loginPage = new LoginPage();
         loginPage.loginCRM("admin@example.com", "123456");
-        waitForPageLoaded();
 
         addNewCustomerPage.clickCustomer(addNewCustomerPage.btnAddNewCustomerPage);
         addNewCustomerPage.senkeyTexAddNewCustomer(addNewCustomerPage.inputCompany, companyName);

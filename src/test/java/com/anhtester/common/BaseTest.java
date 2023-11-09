@@ -1,133 +1,70 @@
 package com.anhtester.common;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+import com.anhtester.drivers.DriverManager;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.*;
 
-import javax.imageio.ImageIO;
-import java.awt.*;
-import java.util.List;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.time.Duration;
-
 public class BaseTest {
-
-    public WebDriver driver;
-
     //@BeforeMethod //Chạy trước mỗi @Test
-    public void createBrowser(){
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
-    }
-
     @BeforeMethod
     @Parameters({"browser"})
-    public void createBrowser(@Optional("chrome") String browserName){if(browserName.equals("chrome")){
-            driver = new ChromeDriver();
-        }
-        if(browserName.equals("edge")){
-            driver = new EdgeDriver();
-        }
-        if(browserName.equals("firefox")){
-            driver = new FirefoxDriver();
-        }
+    public void createDriver(@Optional("chrome") String browser) {
+        WebDriver driver = createBrowser(browser); // khởi tạo browser và gán giá trị cho driver
+        DriverManager.setDriver(driver);// mang giá trị đã khởi tạo vào trong ThreadLocal
+    }
 
+    public WebDriver createBrowser(String browserName) {
+        WebDriver driver;
+        switch (browserName.trim().toLowerCase()) {
+            case "chrome":
+                driver = initChromeDriver();
+                break;
+            case "firefox":
+                driver = initFirefoxDriver();
+                break;
+            case "edge":
+                driver = initEdgeDriver();
+                break;
+            default:
+                System.out.println("Browser: " + browserName + " is invalid, Launching Chrome as browser of choice...");
+                driver = initChromeDriver();
+        }
+        return driver;
+    }
+
+    private WebDriver initChromeDriver() {
+        WebDriver driver;
+        System.out.println("Launching Chrome browser...");
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
-        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20)); //Dành cho Junior
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+        return driver;
+    }
+
+    private WebDriver initEdgeDriver() {
+        WebDriver driver;
+        System.out.println("Launching Edge browser...");
+        WebDriverManager.edgedriver().setup();
+        driver = new EdgeDriver();
+        driver.manage().window().maximize();
+        return driver;
+    }
+
+    private WebDriver initFirefoxDriver() {
+        WebDriver driver;
+        System.out.println("Launching Firefox browser...");
+        WebDriverManager.firefoxdriver().setup();
+        driver = new FirefoxDriver();
+        driver.manage().window().maximize();
+        return driver;
     }
 
     @AfterMethod
-    public void closeBrowser(){
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-        driver.quit();
+    public void closeDriver() {
+        DriverManager.quit();
     }
-
-    public void clickElement(String locator){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        //wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(locator))));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
-        driver.findElement(By.xpath(locator)).click();
-    }
-
-    public void setText(String locator, String text){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
-        driver.findElement(By.xpath(locator)).sendKeys(text);
-    }
-
-    public String getTextElement(String locator){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
-        return driver.findElement(By.xpath(locator)).getText();
-    }
-
-    public Boolean checkElementExist(String xpath) {
-        List<WebElement> listElement = driver.findElements(By.xpath(xpath));
-
-        if (listElement.size() > 0) {
-            System.out.println("Element " + xpath + " existing.");
-            return true;
-        } else {
-            System.out.println("Element " + xpath + " NOT exist.");
-            return false;
-        }
-    }
-
-    //Chờ đợi trang load xong mới thao tác
-    public void waitForPageLoaded() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30), Duration.ofMillis(500));
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-
-        //Wait for Javascript to load
-        ExpectedCondition<Boolean> jsLoad = new ExpectedCondition<Boolean>() {
-            @Override
-            public Boolean apply(WebDriver driver) {
-                return js.executeScript("return document.readyState").toString().equals("complete");
-            }
-        };
-
-        //Check JS is Ready
-        boolean jsReady = js.executeScript("return document.readyState").toString().equals("complete");
-
-        //Wait Javascript until it is Ready!
-        if (!jsReady) {
-            System.out.println("Javascript is NOT Ready.");
-            //Wait for Javascript to load
-            try {
-                wait.until(jsLoad);
-            } catch (Throwable error) {
-                error.printStackTrace();
-                Assert.fail("FAILED. Timeout waiting for page load.");
-            }
-        }
-    }
-
-    public void sleep(double second){
-        try {
-            Thread.sleep((long) (1000 * second));
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-
-
 }

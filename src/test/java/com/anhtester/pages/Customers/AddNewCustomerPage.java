@@ -32,12 +32,6 @@ public class AddNewCustomerPage{
     public By countryId = By.xpath("//select[@id='country']");
     public By btnSave = By.xpath("//div[@id='profile-save-section']//button[@class='btn btn-primary only-save customer-form-submiter']");
 
-    public AddNewCustomerPage(WebDriver driver) {
-        this.driver = driver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        new ActionKeywords(driver); //Truyền giá trị driver vào trong class WebUI
-    }
-
     public void clickCustomer(By locator) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));

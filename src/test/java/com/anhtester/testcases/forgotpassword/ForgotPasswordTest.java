@@ -14,10 +14,9 @@ public class ForgotPasswordTest extends BaseTest {
     }
     @Test
     public void ForgotPasswordEmailNull(){
-        loginPage = new LoginPage(driver);
-        forgotPasswordPage = new ForgotPasswordPage(driver);
+        loginPage = new LoginPage();
+        forgotPasswordPage = new ForgotPasswordPage();
         loginPage.loginPage();
-        waitForPageLoaded();
         forgotPasswordPage.clickForgotPassword();
         forgotPasswordPage.verifyForgotPassword();
     }

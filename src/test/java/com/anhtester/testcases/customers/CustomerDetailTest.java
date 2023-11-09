@@ -13,13 +13,13 @@ public class CustomerDetailTest extends BaseTest {
     CustomerDetailPage customerDetailPage;
     @Test
     public void customerDetail(){
-        loginPage = new LoginPage(driver);
+        loginPage = new LoginPage();
         loginPage.loginCRM(ConfigData.EMAIL,ConfigData.PASSWORD);
         loginPage.verifyLoginSuccess();
-        customerPage = new CustomerPage(driver);
-        customerPage.clickCustomer(customerPage.menuCustomers);
+        customerPage = new CustomerPage();
+        customerPage.clickCustomer();
         customerPage.verifyCustomerPage();
-        customerDetailPage = new CustomerDetailPage(driver);
-        customerDetailPage.searchCustomer(customerDetailPage.btnSearch,"aaaaaaaaa");
+        customerDetailPage = new CustomerDetailPage();
+        customerDetailPage.searchCustomer("aaaaaaaaa");
     }
 }

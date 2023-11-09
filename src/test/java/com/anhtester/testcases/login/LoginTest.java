@@ -13,55 +13,49 @@ public class LoginTest extends BaseTest {
 
     @Test(priority = 7)
     public void loginSuccess() {
-        loginPage = new LoginPage(driver);
+        loginPage = new LoginPage();
         //Gọi các hàm xử lý có sẵn để sử dụng
         dashboardPage = loginPage.loginCRM(ConfigData.EMAIL, ConfigData.PASSWORD);
-        waitForPageLoaded(); //Khi chuyển trang mới dùng (load trang)
         loginPage.verifyLoginSuccess();
         dashboardPage.clickMenuCustomers();
     }
 
     @Test(priority = 1)
     public void loginWithEmailInvalid() {
-        loginPage = new LoginPage(driver);        //Gọi các hàm xử lý có sẵn để sử dụng
+        loginPage = new LoginPage();        //Gọi các hàm xử lý có sẵn để sử dụng
         loginPage.loginCRM("adminn@example.com", ConfigData.PASSWORD);
-        waitForPageLoaded();
         loginPage.verifyLoginFail();
     }
     @Test(priority = 2)
     public void loginWithPasswordInvalid() {
-        loginPage = new LoginPage(driver);        //Gọi các hàm xử lý có sẵn để sử dụng
+        loginPage = new LoginPage();        //Gọi các hàm xử lý có sẵn để sử dụng
         loginPage.loginCRM(ConfigData.EMAIL, "1234567");
-        waitForPageLoaded();
         loginPage.verifyLoginFail();
     }
     @Test(priority = 3)
     public void loginWithEmailPasswordEmpty() {
-        loginPage = new LoginPage(driver);
+        loginPage = new LoginPage();
         //Gọi các hàm xử lý có sẵn để sử dụng
         loginPage.loginCRM("", "");
-        waitForPageLoaded();
         loginPage.verifyLoginEmailPasswordEmpty();
     }
     @Test(priority = 4)
     public void loginWithEmailEmpty() {
-        loginPage = new LoginPage(driver);
+        loginPage = new LoginPage();
         //Gọi các hàm xử lý có sẵn để sử dụng
         loginPage.loginCRM("", ConfigData.PASSWORD);
-        waitForPageLoaded();
         loginPage.verifyEmailNull();
     }
     @Test(priority = 5)
     public void loginWithPasswordEmpty() {
-        loginPage = new LoginPage(driver);
+        loginPage = new LoginPage();
         //Gọi các hàm xử lý có sẵn để sử dụng
         loginPage.loginCRM(ConfigData.EMAIL, "");
-        waitForPageLoaded();
         loginPage.verifyPasswordNull();
     }
     @Test(priority = 6)
     public void chooseCheckboxRemenber(){
-        loginPage = new LoginPage(driver);
+        loginPage = new LoginPage();
         loginPage.loginPage();
         loginPage.checkCheckbox();
     }

@@ -4,16 +4,13 @@ import com.anhtester.keywords.ActionKeywords;
 import com.anhtester.pages.Customers.CustomerPage;
 import com.anhtester.pages.Logins.LoginPage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import static com.anhtester.keywords.ActionKeywords.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import java.time.Duration;
 
 public class DashboardPage {
-    private WebDriver driver;
-    private WebDriverWait wait;
 
     private By menuDashboard = By.xpath("//span[normalize-space()='Dashboard']");
     private By menuCustomers = By.xpath("//span[normalize-space()='Customers']");
@@ -22,34 +19,24 @@ public class DashboardPage {
     private By optionLogout = By.xpath("//ul[@class='dropdown-menu animated fadeIn']//li[@class='header-logout']//a[normalize-space()='Logout']");
     private By menuReports = By.xpath("//span[normalize-space()='Reports']");
 
-    public DashboardPage(WebDriver driver){
-        this.driver = driver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        new ActionKeywords(driver); //Truyền giá trị driver vào trong class WebUI
-    }
-
     public void clickMenuDashboard(){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(menuDashboard));
-        driver.findElement(menuDashboard).click();
+        clickElement(menuDashboard);
     }
 
     public CustomerPage clickMenuCustomers(){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(menuCustomers));
-        driver.findElement(menuCustomers).click();
-        return new CustomerPage(driver);
+        clickElement(menuCustomers);
+        return new CustomerPage();
     }
 
     public void clickMenuProjects(){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(menuProjects));
-        driver.findElement(menuProjects).click();
+        clickElement(menuProjects);
+
     }
 
     public LoginPage logOut(){
-        driver.findElement(dropdownProfile).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(optionLogout));
-        driver.findElement(optionLogout).click();
-
-        return new LoginPage(driver);
+        clickElement(dropdownProfile);
+        clickElement(optionLogout);
+        return new LoginPage();
     }
 
     public void verifyMenuReportDisplay(){

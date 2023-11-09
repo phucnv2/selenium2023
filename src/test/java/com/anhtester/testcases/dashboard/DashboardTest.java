@@ -16,7 +16,7 @@ public class DashboardTest extends BaseTest {
     @Test
     public void testOpenCustomerPage(){
         //Login
-loginPage = new LoginPage(driver);
+loginPage = new LoginPage();
 dashboardPage = loginPage.loginCRM(ConfigData.EMAIL, ConfigData.PASSWORD);
 loginPage.verifyLoginSuccess();
 

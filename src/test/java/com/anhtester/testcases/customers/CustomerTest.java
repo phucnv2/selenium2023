@@ -11,11 +11,10 @@ public class CustomerTest extends BaseTest {
 
     @Test
     public void CustomerSussess() {
-        customerPage = new CustomerPage(driver);
-        loginPage = new LoginPage(driver);
+        customerPage = new CustomerPage();
+        loginPage = new LoginPage();
         loginPage.loginCRM("admin@example.com", "123456");
-        waitForPageLoaded();
-        customerPage.clickCustomer(customerPage.menuCustomers);
+        customerPage.clickCustomer();
         customerPage.verifyCustomerPage();
     }
 }
