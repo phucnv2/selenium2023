@@ -1,6 +1,7 @@
 package com.anhtester.common;
 
 import com.anhtester.drivers.DriverManager;
+import com.anhtester.helpers.PropertiesHelper;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,6 +10,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
 
 public class BaseTest {
+
+    @BeforeSuite
+    public void beforeSuite(){
+        PropertiesHelper.loadAllFiles();
+    }
     //@BeforeMethod //Chạy trước mỗi @Test
     @BeforeMethod
     @Parameters({"browser"})
