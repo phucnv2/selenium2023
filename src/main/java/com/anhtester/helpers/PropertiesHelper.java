@@ -18,7 +18,6 @@ public class PropertiesHelper {
         LinkedList<String> files = new LinkedList<>();
         // Add tất cả file Properties vào đây theo mẫu
         files.add("src/test/resources/configs/configs.properties");
-//        files.add("src/main/resources/dataTest.properties");
 
         try {
             properties = new Properties();

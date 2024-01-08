@@ -7,9 +7,4 @@
             <class name="com.anhtester.testcases.login.LoginTest"></class>
         </classes>
     </test>
-    <test name="Login Test EDGE">
-        <classes>
-            <class name="com.anhtester.testcases.login.LoginTest"></class>
-        </classes>
-    </test>
 </suite>

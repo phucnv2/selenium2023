@@ -8,17 +8,18 @@ public class DriverManager {
     private DriverManager() {
     }
 
-    // thay cho all các giá trị driver bình thường trong project
+    //Thay thế cho tất cả các giá trị driver bình thường trong project
     public static WebDriver getDriver() {
         return driver.get();
     }
 
-    // gọi trước mỗi TC(Before)
+    //Dùng tại BaseTest vị trí Before (cần set giá trị driver trước khi chạy test cases)
     public static void setDriver(WebDriver driver) {
         DriverManager.driver.set(driver);
     }
 
-    // gọi sau khi kết thúc TC(After). reset giá trị driver về null vfa xóa vị trí của driver luôn sau mỗi TC
+    //Dùng tại BaseTest vị trí After (để reset giá trị driver về null
+    //và xoá luôn vị trí của driver đó trong ThreadLocal sau mỗi test cases)
     public static void quit() {
         if (DriverManager.driver.get() != null) {
             DriverManager.driver.get().quit();
