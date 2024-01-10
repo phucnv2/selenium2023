@@ -1,0 +1,16 @@
+- So sánh chuỗi String:
+	+ Dùng hàm "equals" để so sánh bằng (không nên dùng dấu ==)
+	+ Dùng hàm "contains" để so sánh chứa
+
+Keyword: String pool trong Java
+
+Biến static trong Java:
+- Có thể gọi thông qua Tên Class trực tiếp tại các class khác.
+	 VD: ThongTin.name, ThongTin.address
+- Dùng biến Static để lưu trữ giá trị CHUNG trong project.
+
+Phương thức static trong Java:
+- Có thể gọi thông qua Tên Class trực tiếp tại các class khác.
+	 VD: ThongTin.getName(), ThongTin.getAddress()
+- Dùng hàm Static để lưu trữ những xử lý CHUNG trong project.
+	VD: Calculator.cong2So(int a, int b); cong3So(int a, int b, int c)

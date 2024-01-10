@@ -1,0 +1,18 @@
+PAGE OBJECT MODEL THUẦN
+- Khai báo đối tượng By để xây dựng cấu trúc tìm kiếm element
+VD: By inputEmail = By.xpath("") //Khai báo
+
+
+PAGE FACTORY
+- Dùng ghi chú @FindBy để xây dựng cấu trúc tìm kiếm element
+VD: @FindBy(xpath="") WebElement inputEmail; //Khai báo
+- Dùng hàm PageFactory.initElements(driver, this) trong hàm xây dựng
+
+
+Khai báo: chưa mang giá trị
+Khởi tạo: đã mang giá trị
+
+- By: là đối tượng trung gian để xây dựng cấu trúc tìm kiếm, chưa mang giá trị của một WebElment => Không chấm gọi trực tiếp hàm của WebElement được.
+driver.findElement(By).click();
+- WebElement: chấm gọi trực tiếp các hàm trong WebElement
+WebElement.click();

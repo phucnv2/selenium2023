@@ -1,0 +1,13 @@
+NOTES - DataProvider trong TestNG
+- Dùng cái mảng 2 chiều để truyền tải data Object[][]
+- Bộ dữ liệu được đặt trong cặp dấu ngoặc nhọn {} tương ứng 1 dòng dữ liệu
+- Cần phải truyền đúng số lượng tham số đầu vào cho từng cặp dữ liệu
+VD: { {"email1", "pass1"}, {"email2", "pass2"} }
+
+- Dùng ghi chú @DataProvider để khai báo là một hàm cung cấp dữ liệu. Và cần có 1 cái name để phân biệt giữa các hàm.
+	@DataProvider(name = "data_provider_01")
+    public Object[][] dpMethod() {
+        return new Object[][] {
+        	{"First_Value"}, {"Second_Value"}
+        };
+    }

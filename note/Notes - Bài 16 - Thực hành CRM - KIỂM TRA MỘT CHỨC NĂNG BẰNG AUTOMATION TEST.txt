@@ -1,0 +1,9 @@
+KIỂM TRA MỘT CHỨC NĂNG BẰNG AUTOMATION TEST
+- Check header hiển thị đúng - mục đích biết được đã đến trang mình cần
+- Add new tất cả thông tin > Save
+- Search lại > Assert cái giá trị sau khi search
+- Click vào chi tiết
+- Assert hết tất cả các thông số mà mình đã Add New
+
++ Ngoài ra cần đến các trang khác mà có liên quan đến thông số
+của chức năng mình vừa thêm sửa xoá để Assert giá trị hiển thị

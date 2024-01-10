@@ -1,0 +1,4 @@
+-  Page Object = Class Object (Biến, Phương thức xử lý, Kế thừa class, static,...)
+- Lõi của POM sẽ tuân theo hướng đối tượng, Java OOP
+
+=> Mục đích mang lại của POM: giúp cho mình sắp xếp các script theo một trật tự nhất định để đảm bảo việc bảo trì và phát triển dài lâu khi project phình to ra. (rõ ràng, dễ hiểu, logic, dễ hợp tác viết code chung, dễ sửa lỗi)

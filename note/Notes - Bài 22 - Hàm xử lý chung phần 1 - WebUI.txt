@@ -1,0 +1,12 @@
+- Tạo 1 class làm keyword. Ví dụ WebUI
+- Trong class WebUI buộc có hàm xây dựng để truyền driver vào
+- Những hàm xử lý chung trong WebUI thì cần có trạng thái static
+Vì chúng ta có thể lấy tên class chấm gọi trực tiếp cho nhanh
+VD: WebUI.clickElement()
+
+Thay vì:
+WebUI webUI = new WebUI(driver);
+webUI.clickElement();
+
+- Hàm isDisplayed() //Kiểm tra element có hiển thị lên hay không. Nhưng nó ko kiểm tra được element có tồn tại hay ko
+driver.findElement(By.xpath("//input[@id='email']")).isDisplayed();

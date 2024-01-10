@@ -1,0 +1,20 @@
+BÀI 27 - READ PROPERTIES FILE
+
+**Lấy đường dẫn từ ổ đĩa máy tính đến thư mục source:
+System.getProperty("user.dir")
+D:\anhtester\autotest\SeleniumTestNG
+
+File.separator tự hiểu kiểu ký tự phân cách đường dẫn trên hệ điều hành đang dùng
+/ \ // \\
+
+**Cách dùng file Properties là gọi hàm loadAllFiles()
+1 lần và cho chạy trước nhất (ví dụ BeforeSuite)
+PropertiesHelper.loadAllFiles();
+- Chỉ cần load 1 lần là đã lưu giá trị vào bộ nhớ tạm, áp dụng cho toàn phiên chạy
+
+**Khi gọi giá trị dùng:
+PropertiesHelper.getValue("key");
+
+- Khi load nhiều file thì file sau sẽ đè key lên file trước nếu trùng
+
+- Trước khi setValue vào file properties thì nên chỉ định file properties cụ thể cần set vào. Nếu ko chỉ định thì mặc định nó sẽ hiểu là file sau cùng.

@@ -1,0 +1,38 @@
+***Alert
+Alert alert1 = driver.switchTo().alert();
+alert1.accept();
+
+driver.switchTo().alert().accept();
+
+//span[@data-notify='message']
+
+***Popup Window
+- Mở cửa sổ mới:
+driver.switchTo().newWindow(WindowType.TAB); //Dạng Tab
+driver.switchTo().newWindow(WindowType.WINDOW); //Dạng Cửa sổ
+
+Chuyển hướng đến cửa sổ mới:
+- driver.switchTo().window(window_index); //window_index là Cửa sổ cần chuyển hướng đến
+
+- Lấy tất cả các mã định danh Tab/Window:
+        Set<String> windows = driver.getWindowHandles();
+
+String window1 = windows.toArray()[0].toString(); //Lấy cửa số thứ 1 = Main window
+
+String window2 = windows.toArray()[1].toString(); //Lấy cửa sổ thứ 2
+
+***IFrame
+Cách chuyển đến iFrame cụ thể:
+
+- Chuyển hướng theo dạng Index:
+driver.switchTo().frame(0);
+driver.switchTo().frame(1);
+
+- Chuyển hướng theo dạng Name/ID:
+driver.switchTo().frame("iframe1");
+driver.switchTo().frame("id của phần tử");
+
+- Chuyển hướng theo dạng Element là thẻ iframe:
+driver.switchTo().frame(driver.findElement(By.xpath("//iframe")))
+
+VD: driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='google_ads_iframe_/27973503/Vnexpress/Desktop/Masthead/Home_0']")))

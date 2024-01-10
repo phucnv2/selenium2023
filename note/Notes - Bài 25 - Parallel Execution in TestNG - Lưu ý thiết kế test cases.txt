@@ -1,0 +1,12 @@
+//Chạy tuần tự
+Login > Add (1) - Thêm 2 record
+Login > Edit (2)
+Login > Delete (3)
+
+//Chạy song song
+Login > Add (1)
+Login > Add > Edit (1)
+Login > Add > Delete (1)
+
+Những điểm lưu ý khi làm Automation Test cho người mới
+https://anhtester.com/blog/nhung-diem-luu-y-khi-lam-automation-test-cho-nguoi-moi-b526.html

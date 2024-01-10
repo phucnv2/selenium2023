@@ -1,0 +1,21 @@
+Selenium:
+- Tắt dialog
+- Click menu Home
+
+JavascriptExecutor
+- Click thẳng vào element menu Home trong cây thư mục HTML (DOM)
+
+js.executeScript("document.getElementById('email').setAttribute('value','admin02@mailinator.com');");
+
+WebElement inputEmail = driver.findElement(By.xpath(""));
+js.executeScript("arguments[0].setAttribute('value','admin02@mailinator.com');", inputEmail);
+
+*** Selenium có thể thao tác được đối với phần tử bị khuất bởi màn hình
+*** Selenium KHÔNG thể thao tác được đối với phần tử bị che bởi một phần tử khác
+*** Selenium KHÔNG thể thao tác được đối với phần tử chưa load kịp rõ ràng (visible)
+
+
+=> HẠN CHẾ DÙNG JAVASCRIPT EXECUTOR TRONG SELENIUM
+Bởi vì nó không mô phỏng đúng thao tác người dùng
+
+=> Gây sót cases => Gây sót Bugs

@@ -1,0 +1,4 @@
+- File video mặc định có đuôi AVI
+
+- Có thể trên Window không mở được AVI nên cần cài tools ngoài tên VLC Media Player:
+https://www.videolan.org/index.vi.html

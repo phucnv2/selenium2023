@@ -1,0 +1,8 @@
+ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+
+driver.get(); //Thuộc ThreadLocal
+
+driver.get().quit(); //Thuộc Selenium, nhưng lấy giá trị từ TheadLocal
+driver.remove(); //Thuộc ThreadLocal, dùng để xoá luôn vị trí lưu trữ của driver đó trong ThreadLocal
+
+**Để chạy được Parallel Execution thì driver hiện tại sẽ  thay thế thành DriverManager.getDriver() từ class DriverManager

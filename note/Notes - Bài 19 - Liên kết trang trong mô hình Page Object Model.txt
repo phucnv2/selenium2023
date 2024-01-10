@@ -1,0 +1,17 @@
+CÁC BƯỚC THIẾT LẬP LIÊN KẾT TRANG TRONG PAGE OBJECT MODEL
+
+- Xác định vị trí (HÀM/PHƯƠNG THỨC) xảy ra liên kết trang (chuyển trang)
+- Chỉnh sửa lại theo cấu trúc liên kết trang:
+	+ Thay thế kiểu trả về của hàm bằng "tên Trang" cần liên kết đến
+	+ Thêm "return new Trang" ở cuối hàm đó
+
+VD:
+    public DashboardPage loginCRM(String email, String password) {
+        driver.get(url);
+        System.out.println("Navigate to URL: " + url);
+        setInputEmail(email);
+        setInputPassword(password);
+        clickButtonLogin();
+
+        return new DashboardPage(driver);
+    }

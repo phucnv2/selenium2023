@@ -1,0 +1,2 @@
+- Trong file Excel thì chỉ số dòng và chỉ số cột bắt đầu là 0
+- Khi ghi data vào file Excel cần tắt file excel trước khi chạy code

@@ -1,0 +1,86 @@
+Hàm xây dựng trong một class:
++ Tên hàm phải trùng với tên Class
++ Không có kiểu trả về (không có void, String, Integer,…)
++ Được khai báo trùng tên hàm nhưng phải khác nhau về tham số
++ Trong một Class có thể có nhiều hàm xây dựng, nhưng buộc phải khác nhau về tham số hoặc kiểu dữ liệu của tham số
++ Có thể tạo nhiều bộ Data thông qua Hàm xây dựng
++ Kết hợp với ArrayList để lưu trữ dữ liệu dạng bộ data (ví dụ trong video)
+
+=> Công dụng của hàm xây dựng: để khởi tạo giá trị cho các biến trong một Class thông qua khởi tạo class đó
+PHẠM VI TRUY CẬP TRONG JAVA
+
+1. Phạm vi truy cập Private
+- Private Access Modifier chỉ được truy cập trong phạm vi Class. Không mang sang Class khác được.
+- Giấu bớt đi những thành phần lưu trữ và xử lý trung gian
+
+2. Phạm vi truy cập Default
+Default access modifier CHỈ được truy cập bên trong package. 
+-	Ngoài Class được nhưng phải trong cùng 1 package
+
+3. Phạm vi truy cập Protected
+Protected access modifier được truy cập bên trong package. 
+-	Ngoài Class được nhưng trong cùng 1 package
+-	Nếu bên ngoài package thì phải thông qua kế thừa
+
+4. Phạm vi truy cập Public
+Public access modifier được truy cập ở mọi nơi. Trong project và trong package “src” là được.
+
+(pointrightindex)
+ Phạm vi truy cập Public sẽ được dùng nhiều nhất trong project Automation Test. Kế tiếp là phạm vi Private.
+
+Clean code chính là sự định hướng về cách tư duy để tối ưu code. Thông qua đó thì code sẽ dễ đọc hơn, dễ hiểu hơn và dễ phát hiện lỗi, cũng dễ bảo trì mà ngôn ngữ nào cũng có thể áp dụng.
+
+
+✅ Tính đa hình trong Java
+Nạp chồng phương thức:
+Có 2 cách nạp chồng phương thức trong java
+Thay đổi số lượng các tham số
+Thay đổi kiểu dữ liệu của các tham số
+
+
+Ghi đè phương thức:
++ Ghi đè phương thức trong java xảy ra nếu lớp con có phương thức giống lớp cha.
+Phương thức phải có tên giống với lớp cha.
+Phương thức phải có tham số giống với lớp cha.
+Lớp con và lớp cha có mối quan hệ kế thừa.
+
+
+
+
+
+
+✅ Tính trừu tượng trong Java
+Trong java, tính trừu tượng được thể hiện thông qua abstract class và interface.
+
+***Thể hiện qua Abstract class:
+
+abstract class: là một class có từ khoá abstract và chứa các phương thức abstract hoặc hàm bình thường.
+Phương thức abstract của abstract class không được phép khai báo nội dung phương thức. Nó chỉ có thể định nghĩa tên cũng như các tham số đầu vào.
+Class con khi kế thừa Abstract class BUỘC phải ghi đè phương thức (có ghi chú @Override để dễ nhận diện)
+Class con chỉ có thể extends 1 abstract class tại một thời điểm
+
+
+***Thể hiện qua Interface:
+Không phải là class
+Chỉ có thể chứa những hàm không có nội dung (abstract method)
+Dùng từ khoá implements để sử dụng lại các Interface
+Class con có thể implements nhiều Interface tại một thời điểm
+
+Cả abstract class và interface đều sử dụng để xây dựng các tên hàm xử lý chung cho toàn project nhưng không có nội dung. Để các class con sử dụng lại buộc phải xây dựng nội dung từ các hàm có sẵn.
+Mục đích chính là để rõ ràng, minh bạch các tính năng trong project.
+s
+
+
+Tính kế thừa trong Java:
+Sử dụng từ khoá “extends” để kế thừa (BẮT BUỘC)
+Sử dụng từ khoá “super” để truyền cấu trúc hàm xây dựng tại class con giống với lớp cha (BẮT BUỘC)
+Có thể kế thừa liên hoàn. VD: B kế thừa A, C kế thừa B
++ Thì C sẽ sử dụng lại được các thành phần ở cả A và B
+Khi kế thừa chúng ta có thể Ghi đè phương thức. Nghĩa là phương thức từ class con có thể giống với phương thức bên class Cha.
++ Khi sử dụng nó sẽ hiểu là phương thức thuộc class Con
+Khi kế thừa thì class con trực tiếp sử dụng được thành phần trong class Cha. NHƯNG class Cha không sử dụng được thành phần trong class Con trực tiếp.
+
+
+Tính đóng gói trong Java:
+Khai báo các biến trong một lớp là private.
+Xây dựng các phương thức setter và getter là public để có thể sửa đổi và xem các giá trị biến.

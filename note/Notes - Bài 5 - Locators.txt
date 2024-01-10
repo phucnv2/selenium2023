@@ -1,0 +1,51 @@
+Locator: xác định vị trí cụ thể cua một phần tử Web/Mobile/Desktop
+Element/Object: một phần tử hiện diện trên giao diện Web/Mobile/Desktop
+Một giao diện website được cấu thành bởi 3 thành phần chính: HTML, CSS, Javascript
+Thuộc tính của thẻ HTML nghĩa là các biến màu CAM trong thẻ HTML đó
+<input id="email" type="email" class="form-control" name="email" value="" required="" autofocus="" placeholder="Email">
+tagName: input
+id: email
+type: email
+className: form-control
+name: email
+value: null
+placeholder: Email
+
+Cây thư mục HTML = DOM
+Bật F12 hoặc Right click > Inspect
+
+Dựa vào thuộc tính HTML (Buổi 1)
+Đối với giá trị của thuộc tính mà nó bị ĐỘNG hoặc Dynamic chúng không nên dùng thuộc tính đó
+
+Dựa vào Xpath (Buổi 2, 3)
+*** Xpath tuyệt đối:
+Luôn tìm thấy 1 element trên website nếu nằm trong DOM
+Không ổn định khi có sự thay đổi cấu trúc HTML (thay đổi giao diện) => Chính vì thế sau này chúng ta ít dùng đến.
+Xpath tuyệt đối bắt đầu bằng dấu gạch chéo đơn "/" xuất phát từ thẻ “html” đến thẻ cần lấy
+/html/body/div/div[2]/form/div[1]/input
+Đánh dấu vị trí thứ tự của thẻ HTML bằng cách dùng cặp dấu ngoặc vuông sau thẻ html đó.
+VD: div[2] nghĩa là lấy thẻ div thứ 2 trong các thẻ div ngang hàng nhau
+Những thẻ html không có thẻ nào ngang hang thì không cần dùng position
+
+*** Xpath Tương đối
+Xpath tương đối bắt đầu bằng 2 dấu gạch chéo "//".
+Không cần bắt đầu bởi thẻ “html” trong đường dẫn
+Sẽ ổn định hơn xpath tuyệt đối. Vì khi dựa vào nhiều điều kiện khác nhau thì cho dù thay đổi bố cục HTML nó cũng có thể tìm được.
+
+***4) starts-with()
+Bắt đầu với một phần giá trị từ đầu của chuỗi giá trị
+***6) ancestor
+***7) descendant
+Cần xác định nút gốc chuẩn xác
+
+***8) Following và Preceding
+Trả ra các element nằm dưới và trên element gốc
+***9) Following-sibling và Preceding-sibling
+Trả ra những element ngang hàng với element gốc dưới và trên
+
+***10) 
+Parent: chỉ có 1 element cha
+Child: trả ra nhiều element con
+
+Dựa CSS Selector (Không học)
+Xem blog tự học
