@@ -12,9 +12,10 @@ import org.testng.annotations.*;
 
 public class BaseTest {
     @BeforeSuite
-    public void beforeSuite(){
+    public void beforeSuite() {
         PropertiesHelper.loadAllFiles();
     }
+
     //@BeforeMethod //Chạy trước mỗi @Test
     @BeforeMethod
     @Parameters({"browser"})
