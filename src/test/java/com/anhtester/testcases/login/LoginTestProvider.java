@@ -3,6 +3,7 @@ package com.anhtester.testcases.login;
 import com.anhtester.common.BaseTest;
 import com.anhtester.constants.ConfigData;
 import com.anhtester.dataprovider.dataProvider;
+import com.anhtester.helpers.CaptureHelper;
 import com.anhtester.pages.Dashboard.DashboardPage;
 import com.anhtester.pages.Logins.LoginPage;
 import org.testng.annotations.Test;
@@ -14,10 +15,13 @@ public class LoginTestProvider extends BaseTest {
 
     @Test(priority = 7 , dataProvider = "dataLoginSuccess", dataProviderClass = dataProvider.class)
     public void loginSuccess(String email, String password) {
+        CaptureHelper.startRecord("loginSuccess");
         loginPage = new LoginPage();
         //Gọi các hàm xử lý có sẵn để sử dụng
         dashboardPage = loginPage.loginCRM(email, password);
+        CaptureHelper.stopRecord();
         loginPage.verifyLoginSuccess();
+
 //        dashboardPage.clickMenuCustomers();
     }
 

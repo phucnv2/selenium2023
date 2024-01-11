@@ -44,9 +44,9 @@ public class CaptureHelper extends ScreenRecorder {
     }
 
     // Start record video
-    public static void startRecord(String methodName) {
+    public static void startRecord(String recordName) {
         //Tạo thư mục để lưu file video vào
-        File file = new File(SystemHelper.getCurrentDir() + PropertiesHelper.getValue("VIDEO_RECORD_PATH"));
+        File file = new File(SystemHelper.getCurrentDir() + PropertiesHelper.getValue("RECORD_PATH"));
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int width = screenSize.width;
         int height = screenSize.height;
@@ -55,7 +55,7 @@ public class CaptureHelper extends ScreenRecorder {
 
         GraphicsConfiguration gc = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice().getDefaultConfiguration();
         try {
-            screenRecorder = new CaptureHelper(gc, captureSize, new Format(MediaTypeKey, MediaType.FILE, MimeTypeKey, MIME_AVI), new Format(MediaTypeKey, MediaType.VIDEO, EncodingKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE, CompressorNameKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE, DepthKey, 24, FrameRateKey, Rational.valueOf(15), QualityKey, 1.0f, KeyFrameIntervalKey, 15 * 60), new Format(MediaTypeKey, MediaType.VIDEO, EncodingKey, "black", FrameRateKey, Rational.valueOf(30)), null, file, methodName);
+            screenRecorder = new CaptureHelper(gc, captureSize, new Format(MediaTypeKey, MediaType.FILE, MimeTypeKey, MIME_AVI), new Format(MediaTypeKey, MediaType.VIDEO, EncodingKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE, CompressorNameKey, ENCODING_AVI_TECHSMITH_SCREEN_CAPTURE, DepthKey, 24, FrameRateKey, Rational.valueOf(15), QualityKey, 1.0f, KeyFrameIntervalKey, 15 * 60), new Format(MediaTypeKey, MediaType.VIDEO, EncodingKey, "black", FrameRateKey, Rational.valueOf(30)), null, file, recordName);
             screenRecorder.start();
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -63,7 +63,6 @@ public class CaptureHelper extends ScreenRecorder {
             throw new RuntimeException(e);
         }
     }
-
     // Stop record video
     public static void stopRecord() {
         try {
@@ -72,8 +71,6 @@ public class CaptureHelper extends ScreenRecorder {
             throw new RuntimeException(e);
         }
     }
-
-
     //Tạo format ngày giờ để xíu gắn dô cái name của screenshot hoặc record video không bị trùng tên (không bị ghi đè file)
     private static SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH-mm-ss");
 

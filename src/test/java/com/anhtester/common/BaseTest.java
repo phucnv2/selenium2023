@@ -1,6 +1,7 @@
 package com.anhtester.common;
 
 import com.anhtester.drivers.DriverManager;
+import com.anhtester.helpers.CaptureHelper;
 import com.anhtester.helpers.PropertiesHelper;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -70,6 +71,8 @@ public class BaseTest {
 
     @AfterMethod
     public void closeDriver() {
+        // Stop record video
+//        CaptureHelper.stopRecord();
         DriverManager.quit();
     }
 }
