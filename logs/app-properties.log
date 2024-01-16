@@ -1,0 +1,7 @@
+[INFO] 15-01-2024 23:53:30 [main] LogUtils - Đây là log đầu tiên
+[INFO] 15-01-2024 23:58:57 [main] LogUtils - Đây là log đầu tiên
+[INFO] 16-01-2024 00:00:10 [TestNG-PoolService-0] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 16-01-2024 00:00:12 [TestNG-PoolService-0] LogUtils - Set text admin@example.com on input By.xpath: //input[@id='email']
+[INFO] 16-01-2024 00:00:13 [TestNG-PoolService-0] LogUtils - Set text 123456 on input By.xpath: //input[@id='password']
+[INFO] 16-01-2024 00:00:16 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 16-01-2024 00:00:16 [TestNG-PoolService-0] LogUtils - Get current URL is: false
