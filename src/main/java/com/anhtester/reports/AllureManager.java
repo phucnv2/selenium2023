@@ -9,7 +9,7 @@ public class AllureManager {
 
     private AllureManager() {
     }
-    
+
     @Attachment(value = "Page screenshot", type = "image/png")
     public static byte[] saveScreenshotPNG() {
         return ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BYTES);

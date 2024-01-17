@@ -3,77 +3,92 @@ package com.anhtester.common;
 import com.anhtester.drivers.DriverManager;
 import com.anhtester.helpers.CaptureHelper;
 import com.anhtester.helpers.PropertiesHelper;
+import com.anhtester.listeners.TestListener;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.*;
 
-public class BaseTest {
-    @BeforeSuite
-    public void beforeSuite() {
-        PropertiesHelper.loadAllFiles();
-    }
+import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 
-    //@BeforeMethod //Chạy trước mỗi @Test
+@Listeners(TestListener.class)
+public class BaseTest {
+
     @BeforeMethod
     @Parameters({"browser"})
-    public void createDriver(@Optional("chrome") String browser) {
-        WebDriver driver = createBrowser(browser); // khởi tạo browser và gán giá trị cho driver
-        DriverManager.setDriver(driver);// mang giá trị đã khởi tạo vào trong ThreadLocal
+    public void createBrowser(@Optional("chrome") String browserName) {
+        WebDriver driver = setBrowser(browserName);
+
+        //PropertiesHelper.loadAllFiles();
+        //WebDriver driver = setBrowser(PropertiesHelper.getValue("browser"));
+
+        DriverManager.setDriver(driver);
     }
 
-    public WebDriver createBrowser(String browserName) {
-        WebDriver driver;
-        switch (browserName.trim().toLowerCase()) {
-            case "chrome":
-                driver = initChromeDriver();
-                break;
-            case "firefox":
-                driver = initFirefoxDriver();
-                break;
-            case "edge":
-                driver = initEdgeDriver();
-                break;
-            default:
-                System.out.println("Browser: " + browserName + " is invalid, Launching Chrome as browser of choice...");
-                driver = initChromeDriver();
+    public WebDriver setBrowser(String browserName) {
+        WebDriver driver = null;
+
+        if (browserName.trim().toLowerCase().equals("chrome")) {
+            ChromeOptions options = new ChromeOptions();
+            Map<String, Object> prefs = new HashMap<String, Object>();
+            prefs.put("profile.default_content_setting_values.notifications", 2);
+            prefs.put("profile.password_manager_enabled", false);
+            prefs.put("autofill.profile_enabled", false);
+            options.setExperimentalOption("prefs", prefs);
+
+            options.addArguments("--disable-extensions");
+            options.addArguments("--disable-infobars");
+            options.addArguments("--disable-notifications");
+
+            if (PropertiesHelper.getValue("HEADLESS").equals("true")) {
+                options.addArguments("--headless=new");
+                options.addArguments("window-size=1800,900");
+            }
+            driver = new ChromeDriver(options);
         }
-        return driver;
-    }
+        if (browserName.trim().toLowerCase().equals("edge")) {
+            EdgeOptions options = new EdgeOptions();
+            Map<String, Object> prefs = new HashMap<String, Object>();
+            prefs.put("profile.default_content_setting_values.notifications", 2);
+            prefs.put("profile.password_manager_enabled", false);
+            prefs.put("autofill.profile_enabled", false);
+            options.setExperimentalOption("prefs", prefs);
 
-    private WebDriver initChromeDriver() {
-        WebDriver driver;
-        System.out.println("Launching Chrome browser...");
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        return driver;
-    }
+            options.addArguments("--disable-extensions");
+            options.addArguments("--disable-infobars");
+            options.addArguments("--disable-notifications");
 
-    private WebDriver initEdgeDriver() {
-        WebDriver driver;
-        System.out.println("Launching Edge browser...");
-        WebDriverManager.edgedriver().setup();
-        driver = new EdgeDriver();
-        driver.manage().window().maximize();
-        return driver;
-    }
+            if (PropertiesHelper.getValue("HEADLESS").equals("true")) {
+                options.addArguments("--headless=new");
+                options.addArguments("window-size=1800,900");
+            }
+            driver = new EdgeDriver(options);
+        }
+        if (browserName.trim().toLowerCase().equals("firefox")) {
+            FirefoxOptions options = new FirefoxOptions();
+            if (PropertiesHelper.getValue("HEADLESS").equals("true")) {
+                options.addArguments("--headless");
+                options.addArguments("window-size=1800,900");
+            }
+            driver = new FirefoxDriver(options);
+        }
 
-    private WebDriver initFirefoxDriver() {
-        WebDriver driver;
-        System.out.println("Launching Firefox browser...");
-        WebDriverManager.firefoxdriver().setup();
-        driver = new FirefoxDriver();
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
         driver.manage().window().maximize();
+
         return driver;
     }
 
     @AfterMethod
-    public void closeDriver() {
-        // Stop record video
-//        CaptureHelper.stopRecord();
+    public void closeBrowser() {
         DriverManager.quit();
     }
+
 }

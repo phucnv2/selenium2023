@@ -16,5 +16,4 @@ public class ExtentReportManager {
 //        extentReports.setSystemInfo("Author", PropertiesHelper.getValue("AUTHOR"));
         return extentReports;
     }
-
 }

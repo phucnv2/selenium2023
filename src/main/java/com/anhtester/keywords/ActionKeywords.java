@@ -1,7 +1,9 @@
 package com.anhtester.keywords;
 
 import com.anhtester.drivers.DriverManager;
+import com.anhtester.reports.ExtentTestManager;
 import com.anhtester.utils.LogUtils;
+import com.aventstack.extentreports.Status;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -57,6 +59,7 @@ public class ActionKeywords {
         DriverManager.getDriver().get(url);
         sleep(STEP_TIME);
         LogUtils.info("Open URL: " + url);
+        ExtentTestManager.logMessage(Status.INFO, "Open URL: " + url);
     }
 
     public static void clickElement(By by) {
@@ -65,6 +68,7 @@ public class ActionKeywords {
         highLightElement(by);
         getWebElement(by).click();
         LogUtils.info("Click on element " + by);
+        ExtentTestManager.logMessage(Status.INFO, "Click on element " + by);
     }
     public static boolean isDisplayed(By by) {
         waitForElementVisible(by);
@@ -89,17 +93,20 @@ public class ActionKeywords {
         highLightElement(by);
         DriverManager.getDriver().findElement(by).sendKeys(text);
         LogUtils.info("Set text " + text + " on input " + by);
+        ExtentTestManager.logMessage(Status.INFO, "Set text " + text + " on element " + by);
     }
 
     public static String getElementText(By by) {
         waitForElementVisible(by);
         String text = DriverManager.getDriver().findElement(by).getText();
         LogUtils.info("Get text of element " + by + " is: " + text);
+        ExtentTestManager.logMessage(Status.INFO, "Get text of element " + by);
+        ExtentTestManager.logMessage(Status.INFO, "==> Text: " + getWebElement(by).getText());
         return text;
     }
     public static boolean getCurrentUrl(String textUrl) {
         boolean text = DriverManager.getDriver().getCurrentUrl().contains(textUrl);
-        LogUtils.info("Get current URL is: " + text);
+        LogUtils.info("Get current URL is: " + textUrl);
         return true;
     }
 
@@ -107,6 +114,7 @@ public class ActionKeywords {
         waitForElementVisible(by);
         String value = DriverManager.getDriver().findElement(by).getAttribute(attributeName);
         LogUtils.info("Get attribute value of element " + by + " is: " + value);
+        ExtentTestManager.logMessage(Status.INFO, "Get attribute value of element " + by + " is: " + value);
         return value;
     }
 //    public static String search(By by, String text){
