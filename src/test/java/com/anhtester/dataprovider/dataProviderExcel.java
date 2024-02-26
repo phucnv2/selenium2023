@@ -10,6 +10,12 @@ public class dataProviderExcel {
         Object[][] data = excelHelper.getExcelData("src/test/resources/dataTest/Login.xlsx", "DataLogin");
         return data;
     }
+    @DataProvider(name = "dataUser", parallel = true)
+    public Object[][] dataUser() {
+        ExcelHelper excelHelper = new ExcelHelper();
+        Object[][] data = excelHelper.getExcelData("src/test/resources/dataTest/Login.xlsx", "NewUser");
+        return data;
+    }
 
     @DataProvider(name = "dataEmailInValid", parallel = true)
     public Object[][] dataEmailInValid() {

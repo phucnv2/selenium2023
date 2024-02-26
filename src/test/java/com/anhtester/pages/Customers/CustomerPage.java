@@ -10,8 +10,7 @@ import static com.anhtester.keywords.ActionKeywords.*;
 import java.time.Duration;
 
 public class CustomerPage{
-    private WebDriver driver;
-    private WebDriverWait wait;
+
     public By headerCustomerPage = By.xpath("//span[normalize-space()='Customers Summary']");
     public By menuCustomers = By.xpath("//span[normalize-space()='Customers']");
 

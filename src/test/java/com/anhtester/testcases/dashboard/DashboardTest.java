@@ -5,6 +5,7 @@ import com.anhtester.pages.Customers.CustomerPage;
 import com.anhtester.pages.Dashboard.DashboardPage;
 import com.anhtester.pages.Logins.LoginPage;
 import com.anhtester.common.BaseTest;
+import com.anhtester.pages.NewUser.CreateUserPage;
 import org.testng.annotations.Test;
 
 public class DashboardTest extends BaseTest {
@@ -16,14 +17,12 @@ public class DashboardTest extends BaseTest {
     @Test
     public void testOpenCustomerPage(){
         //Login
-loginPage = new LoginPage();
-dashboardPage = loginPage.loginCRM(ConfigData.EMAIL, ConfigData.PASSWORD);
-loginPage.verifyLoginSuccess();
-
-//Click menu Customer
-customerPage = dashboardPage.clickMenuCustomers();
-customerPage.verifyCustomerPage();
-
+        loginPage = new LoginPage();
+        dashboardPage = loginPage.loginCRM(ConfigData.EMAIL, ConfigData.PASSWORD);
+        loginPage.verifyLoginSuccess();
+        //Click menu Customer
+        customerPage = dashboardPage.clickMenuCustomers();
+        customerPage.verifyCustomerPage();
     }
 
     @Test

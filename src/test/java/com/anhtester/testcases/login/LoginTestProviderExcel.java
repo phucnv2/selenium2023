@@ -22,7 +22,7 @@ public class LoginTestProviderExcel extends BaseTest {
         dashboardPage = loginPage.loginCRM(email, password);
         CaptureHelper.captureScreenshot("loginSuccess");
         loginPage.verifyLoginSuccess();
-//        dashboardPage.clickMenuCustomers();
+        dashboardPage.clickMenuCustomers();
     }
 
     @Test(priority = 1, dataProvider = "dataEmailInValid", dataProviderClass = dataProviderExcel.class)

@@ -10,4 +10,7 @@ public class ConfigData {
     public static String URL = PropertiesHelper.getValue("url");
     public static String EMAIL = PropertiesHelper.getValue("email");
     public static String PASSWORD = PropertiesHelper.getValue("password");
+
+    public static String SUPPER_EMAIL = PropertiesHelper.getValue("supper_email");
+    public static String SUPPER_PASSWORD = PropertiesHelper.getValue("supper_password");
 }
