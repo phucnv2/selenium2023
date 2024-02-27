@@ -20,7 +20,11 @@ public class CreateUserPage {
     public By inputPassword = By.xpath("//input[@name='password']");
     public By checkboxSendMail = By.xpath("");
     public By btnSave = By.xpath("//button[normalize-space()='Save']");
-    public By textRequired = By.xpath("//p[@id='firstname-error']");
+    public By textRequiredFirstName = By.xpath("//p[@id='firstname-error']");
+    public By textRequiredLastName = By.xpath("//p[@id='lastname-error']");
+    public By textRequiredEmail = By.xpath("//p[@id='email-error']");
+    public By textRequiredEmailInvalid = By.xpath("//p[@id='email-error']");
+    public By textRequiredPasswordInvalid = By.xpath("//p[@id='password-error']");
 
     public void clickMenuStaff(){
         clickElement(btnStaff);
@@ -35,10 +39,26 @@ public class CreateUserPage {
 //        Select select = new Select(getWebElement(locator));
 //        select.selectByVisibleText(text);
 //    }
-    public void verifyFirstNameNull(){
-        Assert.assertTrue(isDisplayed(textRequired),"Error message NOT display");
-        Assert.assertEquals(getElementText(textRequired),"This field is required.","Text of error massage NOT match.");
-}
+    public void verifyFirstNameInvalid(){
+        Assert.assertTrue(isDisplayed(textRequiredFirstName),"Error message NOT display");
+        Assert.assertEquals(getElementText(textRequiredFirstName),"This field is required.","Text of error massage NOT match.");
+    }
+    public void verifylastNameInvalid(){
+        Assert.assertTrue(isDisplayed(textRequiredLastName),"Error message NOT display");
+        Assert.assertEquals(getElementText(textRequiredLastName),"This field is required.","Text of error massage NOT match.");
+    }
+    public void verifyEmaillNull(){
+        Assert.assertTrue(isDisplayed(textRequiredEmail),"Error message NOT display");
+        Assert.assertEquals(getElementText(textRequiredEmail),"This field is required.","Text of error massage NOT match.");
+    }
+    public void verifyEmaillInvalid(){
+        Assert.assertTrue(isDisplayed(textRequiredEmailInvalid),"Error message NOT display");
+        Assert.assertEquals(getElementText(textRequiredEmailInvalid),"Please enter a valid email address.","Text of error massage NOT match.");
+    }
+    public void verifyPasswordInvalid(){
+        Assert.assertTrue(isDisplayed(textRequiredPasswordInvalid),"Error message NOT display");
+        Assert.assertEquals(getElementText(textRequiredPasswordInvalid),"This field is required.","Text of error massage NOT match.");
+    }
     public void insertInfomtionUser(String firstName, String lastName, String email, String phone, String password, String language){
         setText(inputFirstName,firstName);
         setText(inputLastName,lastName);
@@ -48,12 +68,11 @@ public class CreateUserPage {
         setText(inputPassword,password);
         clickElement(btnSave);
     }
-    public void verifyFirstNameInvalid(String firstName,String lastName, String email, String password){
+    public void verifyInvalid(String firstName,String lastName, String email, String password){
         setText(inputFirstName,firstName);
         setText(inputLastName,lastName);
         setText(inputEmail,email);
         setText(inputPassword,password);
         clickElement(btnSave);
-        verifyFirstNameNull();
     }
 }

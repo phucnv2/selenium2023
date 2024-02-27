@@ -251,3 +251,204 @@
 [INFO] 17-01-2024 23:55:01 [main] LogUtils - Get current URL is: authentication
 [INFO] 17-01-2024 23:55:02 [main] LogUtils - Click on element By.xpath: //span[normalize-space()='Customers']
 [INFO] 17-01-2024 23:55:02 [main] LogUtils - ==> loginSuccess is successfully.
+[INFO] 27-02-2024 15:15:34 [main] LogUtils - *********createUserWithFirstNameInvalid*********
+[INFO] 27-02-2024 15:15:38 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 27-02-2024 15:15:39 [main] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 27-02-2024 15:15:40 [main] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 27-02-2024 15:15:44 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 27-02-2024 15:15:44 [main] LogUtils - Get current URL is: authentication
+[INFO] 27-02-2024 15:15:45 [main] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 27-02-2024 15:15:47 [main] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 27-02-2024 15:15:48 [main] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 27-02-2024 15:15:50 [main] LogUtils - Set text  on input By.xpath: //input[@id='firstname']
+[INFO] 27-02-2024 15:15:51 [main] LogUtils - Set text lastName on input By.xpath: //input[@id='lastname']
+[INFO] 27-02-2024 15:15:52 [main] LogUtils - Set text email@gmail.com on input By.xpath: //input[@id='email']
+[INFO] 27-02-2024 15:15:52 [main] LogUtils - Set text password on input By.xpath: //input[@name='password']
+[INFO] 27-02-2024 15:15:54 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Save']
+[INFO] 27-02-2024 15:15:54 [main] LogUtils - Text show By.xpath: //p[@id='firstname-error']
+[INFO] 27-02-2024 15:15:54 [main] LogUtils - Get text of element By.xpath: //p[@id='firstname-error'] is: This field is required.
+[INFO] 27-02-2024 15:15:54 [main] LogUtils - Text show By.xpath: //p[@id='firstname-error']
+[INFO] 27-02-2024 15:15:54 [main] LogUtils - Get text of element By.xpath: //p[@id='firstname-error'] is: This field is required.
+[INFO] 27-02-2024 15:15:54 [main] LogUtils - ==> createUserWithFirstNameInvalid is successfully.
+[INFO] 27-02-2024 15:15:56 [main] LogUtils - *********createUserWithLastNameInvalid*********
+[INFO] 27-02-2024 15:15:57 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 27-02-2024 15:15:58 [main] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 27-02-2024 15:15:59 [main] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 27-02-2024 15:16:02 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 27-02-2024 15:16:02 [main] LogUtils - Get current URL is: authentication
+[INFO] 27-02-2024 15:16:04 [main] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 27-02-2024 15:16:06 [main] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 27-02-2024 15:16:07 [main] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 27-02-2024 15:16:09 [main] LogUtils - Set text firstName on input By.xpath: //input[@id='firstname']
+[INFO] 27-02-2024 15:16:10 [main] LogUtils - Set text  on input By.xpath: //input[@id='lastname']
+[INFO] 27-02-2024 15:16:10 [main] LogUtils - Set text email@gmail.com on input By.xpath: //input[@id='email']
+[INFO] 27-02-2024 15:16:11 [main] LogUtils - Set text password on input By.xpath: //input[@name='password']
+[INFO] 27-02-2024 15:16:12 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Save']
+[ERROR] 27-02-2024 15:16:23 [main] LogUtils - Timeout waiting for the element Visible. By.xpath: //p[@id='firstname-error']
+[ERROR] 27-02-2024 15:16:23 [main] LogUtils - ==> createUserWithLastNameInvalid is FAIL.
+[INFO] 27-02-2024 15:16:25 [main] LogUtils - *********createUserWithEmailNull*********
+[INFO] 27-02-2024 15:16:26 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 27-02-2024 15:16:27 [main] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 27-02-2024 15:16:28 [main] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 27-02-2024 15:16:31 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 27-02-2024 15:16:31 [main] LogUtils - Get current URL is: authentication
+[INFO] 27-02-2024 15:16:32 [main] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 27-02-2024 15:16:34 [main] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 27-02-2024 15:16:36 [main] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 27-02-2024 15:16:37 [main] LogUtils - Set text firstName on input By.xpath: //input[@id='firstname']
+[INFO] 27-02-2024 15:16:38 [main] LogUtils - Set text lastName on input By.xpath: //input[@id='lastname']
+[INFO] 27-02-2024 15:16:39 [main] LogUtils - Set text  on input By.xpath: //input[@id='email']
+[INFO] 27-02-2024 15:16:39 [main] LogUtils - Set text password on input By.xpath: //input[@name='password']
+[INFO] 27-02-2024 15:16:41 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Save']
+[ERROR] 27-02-2024 15:16:51 [main] LogUtils - Timeout waiting for the element Visible. By.xpath: //p[@id='firstname-error']
+[ERROR] 27-02-2024 15:16:51 [main] LogUtils - ==> createUserWithEmailNull is FAIL.
+[INFO] 27-02-2024 15:16:53 [main] LogUtils - *********createUserWithEmailInvalid*********
+[INFO] 27-02-2024 15:16:54 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 27-02-2024 15:16:55 [main] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 27-02-2024 15:16:55 [main] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 27-02-2024 15:16:58 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 27-02-2024 15:16:59 [main] LogUtils - Get current URL is: authentication
+[INFO] 27-02-2024 15:17:00 [main] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 27-02-2024 15:17:02 [main] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 27-02-2024 15:17:03 [main] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 27-02-2024 15:17:05 [main] LogUtils - Set text firstName on input By.xpath: //input[@id='firstname']
+[INFO] 27-02-2024 15:17:05 [main] LogUtils - Set text firstName on input By.xpath: //input[@id='lastname']
+[INFO] 27-02-2024 15:17:06 [main] LogUtils - Set text email on input By.xpath: //input[@id='email']
+[INFO] 27-02-2024 15:17:07 [main] LogUtils - Set text password on input By.xpath: //input[@name='password']
+[INFO] 27-02-2024 15:17:08 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Save']
+[ERROR] 27-02-2024 15:17:18 [main] LogUtils - Timeout waiting for the element Visible. By.xpath: //p[@id='firstname-error']
+[ERROR] 27-02-2024 15:17:18 [main] LogUtils - ==> createUserWithEmailInvalid is FAIL.
+[INFO] 27-02-2024 15:17:20 [main] LogUtils - *********createUserWithPasswordInvalid*********
+[INFO] 27-02-2024 15:17:21 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 27-02-2024 15:17:22 [main] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 27-02-2024 15:17:23 [main] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 27-02-2024 15:17:26 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 27-02-2024 15:17:26 [main] LogUtils - Get current URL is: authentication
+[INFO] 27-02-2024 15:17:27 [main] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 27-02-2024 15:17:29 [main] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 27-02-2024 15:17:30 [main] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 27-02-2024 15:17:32 [main] LogUtils - Set text firstName on input By.xpath: //input[@id='firstname']
+[INFO] 27-02-2024 15:17:32 [main] LogUtils - Set text firstName on input By.xpath: //input[@id='lastname']
+[INFO] 27-02-2024 15:17:33 [main] LogUtils - Set text email on input By.xpath: //input[@id='email']
+[INFO] 27-02-2024 15:17:34 [main] LogUtils - Set text  on input By.xpath: //input[@name='password']
+[INFO] 27-02-2024 15:17:35 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Save']
+[ERROR] 27-02-2024 15:17:45 [main] LogUtils - Timeout waiting for the element Visible. By.xpath: //p[@id='firstname-error']
+[ERROR] 27-02-2024 15:17:45 [main] LogUtils - ==> createUserWithPasswordInvalid is FAIL.
+[INFO] 27-02-2024 16:37:31 [main] LogUtils - *********createUserWithPasswordInvalid*********
+[INFO] 27-02-2024 16:37:33 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 27-02-2024 16:37:34 [main] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 27-02-2024 16:37:35 [main] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 27-02-2024 16:37:38 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 27-02-2024 16:37:38 [main] LogUtils - Get current URL is: authentication
+[INFO] 27-02-2024 16:37:39 [main] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 27-02-2024 16:37:42 [main] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 27-02-2024 16:37:43 [main] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 27-02-2024 16:37:44 [main] LogUtils - Set text firstName on input By.xpath: //input[@id='firstname']
+[INFO] 27-02-2024 16:37:45 [main] LogUtils - Set text firstName on input By.xpath: //input[@id='lastname']
+[INFO] 27-02-2024 16:37:45 [main] LogUtils - Set text email on input By.xpath: //input[@id='email']
+[INFO] 27-02-2024 16:37:46 [main] LogUtils - Set text  on input By.xpath: //input[@name='password']
+[INFO] 27-02-2024 16:37:47 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Save']
+[INFO] 27-02-2024 16:37:47 [main] LogUtils - Text show By.xpath: //p[@id='password-error']
+[INFO] 27-02-2024 16:37:47 [main] LogUtils - Get text of element By.xpath: //p[@id='password-error'] is: This field is required.
+[INFO] 27-02-2024 16:37:47 [main] LogUtils - ==> createUserWithPasswordInvalid is successfully.
+[INFO] 27-02-2024 16:38:22 [main] LogUtils - *********createUserWithEmailInvalid*********
+[INFO] 27-02-2024 16:38:25 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 27-02-2024 16:38:26 [main] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 27-02-2024 16:38:27 [main] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 27-02-2024 16:38:31 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 27-02-2024 16:38:31 [main] LogUtils - Get current URL is: authentication
+[INFO] 27-02-2024 16:38:33 [main] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 27-02-2024 16:38:34 [main] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 27-02-2024 16:38:36 [main] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 27-02-2024 16:38:37 [main] LogUtils - Set text firstName on input By.xpath: //input[@id='firstname']
+[INFO] 27-02-2024 16:38:38 [main] LogUtils - Set text firstName on input By.xpath: //input[@id='lastname']
+[INFO] 27-02-2024 16:38:38 [main] LogUtils - Set text email on input By.xpath: //input[@id='email']
+[INFO] 27-02-2024 16:38:39 [main] LogUtils - Set text password on input By.xpath: //input[@name='password']
+[INFO] 27-02-2024 16:38:40 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Save']
+[INFO] 27-02-2024 16:38:40 [main] LogUtils - Text show By.xpath: //p[@id='email-error']
+[INFO] 27-02-2024 16:38:40 [main] LogUtils - Get text of element By.xpath: //p[@id='email-error'] is: Please enter a valid email address.
+[ERROR] 27-02-2024 16:38:40 [main] LogUtils - ==> createUserWithEmailInvalid is FAIL.
+[INFO] 27-02-2024 16:42:16 [main] LogUtils - *********createUserWithEmailInvalid*********
+[INFO] 27-02-2024 16:42:19 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 27-02-2024 16:42:19 [main] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 27-02-2024 16:42:20 [main] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 27-02-2024 16:42:23 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 27-02-2024 16:42:23 [main] LogUtils - Get current URL is: authentication
+[INFO] 27-02-2024 16:42:25 [main] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 27-02-2024 16:42:27 [main] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 27-02-2024 16:42:29 [main] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 27-02-2024 16:42:30 [main] LogUtils - Set text firstName on input By.xpath: //input[@id='firstname']
+[INFO] 27-02-2024 16:42:31 [main] LogUtils - Set text firstName on input By.xpath: //input[@id='lastname']
+[INFO] 27-02-2024 16:42:31 [main] LogUtils - Set text email on input By.xpath: //input[@id='email']
+[INFO] 27-02-2024 16:42:32 [main] LogUtils - Set text password on input By.xpath: //input[@name='password']
+[INFO] 27-02-2024 16:42:33 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Save']
+[INFO] 27-02-2024 16:42:33 [main] LogUtils - Text show By.xpath: //p[@id='email-error']
+[INFO] 27-02-2024 16:42:33 [main] LogUtils - Get text of element By.xpath: //p[@id='email-error'] is: Please enter a valid email address.
+[INFO] 27-02-2024 16:42:33 [main] LogUtils - ==> createUserWithEmailInvalid is successfully.
+[INFO] 27-02-2024 16:42:49 [main] LogUtils - *********createUserWithEmailNull*********
+[INFO] 27-02-2024 16:42:51 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 27-02-2024 16:42:52 [main] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 27-02-2024 16:42:53 [main] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 27-02-2024 16:42:56 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 27-02-2024 16:42:56 [main] LogUtils - Get current URL is: authentication
+[INFO] 27-02-2024 16:42:57 [main] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 27-02-2024 16:43:00 [main] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 27-02-2024 16:43:01 [main] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 27-02-2024 16:43:03 [main] LogUtils - Set text firstName on input By.xpath: //input[@id='firstname']
+[INFO] 27-02-2024 16:43:03 [main] LogUtils - Set text lastName on input By.xpath: //input[@id='lastname']
+[INFO] 27-02-2024 16:43:04 [main] LogUtils - Set text  on input By.xpath: //input[@id='email']
+[INFO] 27-02-2024 16:43:05 [main] LogUtils - Set text password on input By.xpath: //input[@name='password']
+[INFO] 27-02-2024 16:43:06 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Save']
+[ERROR] 27-02-2024 16:43:16 [main] LogUtils - Timeout waiting for the element Visible. By.xpath: //p[@id='lastname-error']
+[ERROR] 27-02-2024 16:43:16 [main] LogUtils - ==> createUserWithEmailNull is FAIL.
+[INFO] 27-02-2024 16:44:50 [main] LogUtils - *********createUserWithEmailNull*********
+[INFO] 27-02-2024 16:44:52 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 27-02-2024 16:44:53 [main] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 27-02-2024 16:44:54 [main] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 27-02-2024 16:44:57 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 27-02-2024 16:44:57 [main] LogUtils - Get current URL is: authentication
+[INFO] 27-02-2024 16:44:58 [main] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 27-02-2024 16:45:00 [main] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 27-02-2024 16:45:02 [main] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 27-02-2024 16:45:02 [main] LogUtils - Set text firstName on input By.xpath: //input[@id='firstname']
+[INFO] 27-02-2024 16:45:03 [main] LogUtils - Set text lastName on input By.xpath: //input[@id='lastname']
+[INFO] 27-02-2024 16:45:04 [main] LogUtils - Set text  on input By.xpath: //input[@id='email']
+[INFO] 27-02-2024 16:45:04 [main] LogUtils - Set text password on input By.xpath: //input[@name='password']
+[INFO] 27-02-2024 16:45:06 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Save']
+[INFO] 27-02-2024 16:45:06 [main] LogUtils - Text show By.xpath: //p[@id='email-error']
+[INFO] 27-02-2024 16:45:06 [main] LogUtils - Get text of element By.xpath: //p[@id='email-error'] is: This field is required.
+[INFO] 27-02-2024 16:45:06 [main] LogUtils - ==> createUserWithEmailNull is successfully.
+[INFO] 27-02-2024 16:46:27 [main] LogUtils - *********createUserWithLastNameInvalid*********
+[INFO] 27-02-2024 16:46:30 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 27-02-2024 16:46:30 [main] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 27-02-2024 16:46:31 [main] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 27-02-2024 16:46:35 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 27-02-2024 16:46:35 [main] LogUtils - Get current URL is: authentication
+[INFO] 27-02-2024 16:46:36 [main] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 27-02-2024 16:46:38 [main] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 27-02-2024 16:46:39 [main] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 27-02-2024 16:46:40 [main] LogUtils - Set text firstName on input By.xpath: //input[@id='firstname']
+[INFO] 27-02-2024 16:46:41 [main] LogUtils - Set text  on input By.xpath: //input[@id='lastname']
+[INFO] 27-02-2024 16:46:41 [main] LogUtils - Set text email@gmail.com on input By.xpath: //input[@id='email']
+[INFO] 27-02-2024 16:46:42 [main] LogUtils - Set text password on input By.xpath: //input[@name='password']
+[INFO] 27-02-2024 16:46:43 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Save']
+[INFO] 27-02-2024 16:46:43 [main] LogUtils - Text show By.xpath: //p[@id='lastname-error']
+[INFO] 27-02-2024 16:46:43 [main] LogUtils - Get text of element By.xpath: //p[@id='lastname-error'] is: This field is required.
+[INFO] 27-02-2024 16:46:43 [main] LogUtils - ==> createUserWithLastNameInvalid is successfully.
+[INFO] 27-02-2024 16:47:06 [main] LogUtils - *********createUserWithFirstNameInvalid*********
+[INFO] 27-02-2024 16:47:08 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 27-02-2024 16:47:09 [main] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 27-02-2024 16:47:10 [main] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 27-02-2024 16:47:13 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 27-02-2024 16:47:13 [main] LogUtils - Get current URL is: authentication
+[INFO] 27-02-2024 16:47:14 [main] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 27-02-2024 16:47:15 [main] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 27-02-2024 16:47:17 [main] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 27-02-2024 16:47:18 [main] LogUtils - Set text  on input By.xpath: //input[@id='firstname']
+[INFO] 27-02-2024 16:47:19 [main] LogUtils - Set text lastName on input By.xpath: //input[@id='lastname']
+[INFO] 27-02-2024 16:47:19 [main] LogUtils - Set text email@gmail.com on input By.xpath: //input[@id='email']
+[INFO] 27-02-2024 16:47:20 [main] LogUtils - Set text password on input By.xpath: //input[@name='password']
+[INFO] 27-02-2024 16:47:21 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Save']
+[INFO] 27-02-2024 16:47:21 [main] LogUtils - Text show By.xpath: //p[@id='firstname-error']
+[INFO] 27-02-2024 16:47:21 [main] LogUtils - Get text of element By.xpath: //p[@id='firstname-error'] is: This field is required.
+[INFO] 27-02-2024 16:47:21 [main] LogUtils - ==> createUserWithFirstNameInvalid is successfully.

@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Extent Report | Phuc Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jan 17, 2024 11:54:19 PM</span></a>
+<a href="#"><span class="badge badge-primary">Feb 27, 2024 04:47:06 PM</span></a>
 </li>
 </ul>
 </div>
@@ -79,9 +79,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">loginWithEmailInvalid</p>
+            <p class="name">createUserWithFirstNameInvalid</p>
             <p class="text-sm">
-              <span>11:54:20 PM</span> / <span>00:00:04:590</span>
+              <span>4:47:07 PM</span> / <span>00:00:14:909</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -89,10 +89,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">loginWithEmailInvalid</h5>
-<span class='badge badge-success'>01.17.2024 11:54:20 PM</span>
-<span class='badge badge-danger'>01.17.2024 11:54:25 PM</span>
-<span class='badge badge-default'>00:00:04:590</span>
+<h5 class="test-status text-pass">createUserWithFirstNameInvalid</h5>
+<span class='badge badge-success'>02.27.2024 4:47:07 PM</span>
+<span class='badge badge-danger'>02.27.2024 4:47:22 PM</span>
+<span class='badge badge-default'>00:00:14:909</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -106,534 +106,107 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:21 PM</td>
+        <td>4:47:08 PM</td>
         <td>
           Open URL: https://crm.anhtester.com/admin/authentication
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:22 PM</td>
+        <td>4:47:09 PM</td>
         <td>
-          Set text adminn@example.com on element By.xpath: //input[@id='email']
+          Set text anhtester@email.com on element By.xpath: //input[@id='email']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:23 PM</td>
+        <td>4:47:10 PM</td>
         <td>
-          Set text 123456 on element By.xpath: //input[@id='password']
+          Set text AnhTester@2023# on element By.xpath: //input[@id='password']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:24 PM</td>
+        <td>4:47:13 PM</td>
         <td>
           Click on element By.xpath: //button[normalize-space()='Login']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:24 PM</td>
+        <td>4:47:14 PM</td>
         <td>
-          Get text of element By.xpath: //div[@id='alerts']
+          Click on element By.xpath: //a[@class='open-customizer']
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:24 PM</td>
+        <td>4:47:15 PM</td>
         <td>
-          ==> Text: Invalid email or password
+          Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:47:17 PM</td>
+        <td>
+          Click on element By.xpath: //a[normalize-space()='New Staff Member']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:47:18 PM</td>
+        <td>
+          Set text  on element By.xpath: //input[@id='firstname']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:47:19 PM</td>
+        <td>
+          Set text lastName on element By.xpath: //input[@id='lastname']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:47:19 PM</td>
+        <td>
+          Set text email@gmail.com on element By.xpath: //input[@id='email']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:47:20 PM</td>
+        <td>
+          Set text password on element By.xpath: //input[@name='password']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:47:21 PM</td>
+        <td>
+          Click on element By.xpath: //button[normalize-space()='Save']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:47:21 PM</td>
+        <td>
+          Get text of element By.xpath: //p[@id='firstname-error']
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:47:21 PM</td>
+        <td>
+          ==> Text: This field is required.
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:54:25 PM</td>
+        <td>4:47:22 PM</td>
         <td>
-          loginWithEmailInvalid is passed.
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="2"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">loginWithPasswordInvalid</p>
-            <p class="text-sm">
-              <span>11:54:26 PM</span> / <span>00:00:04:275</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">loginWithPasswordInvalid</h5>
-<span class='badge badge-success'>01.17.2024 11:54:26 PM</span>
-<span class='badge badge-danger'>01.17.2024 11:54:31 PM</span>
-<span class='badge badge-default'>00:00:04:275</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5"></div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:28 PM</td>
-        <td>
-          Open URL: https://crm.anhtester.com/admin/authentication
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:28 PM</td>
-        <td>
-          Set text admin@example.com on element By.xpath: //input[@id='email']
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:29 PM</td>
-        <td>
-          Set text 1234567 on element By.xpath: //input[@id='password']
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:30 PM</td>
-        <td>
-          Click on element By.xpath: //button[normalize-space()='Login']
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:30 PM</td>
-        <td>
-          Get text of element By.xpath: //div[@id='alerts']
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:31 PM</td>
-        <td>
-          ==> Text: Invalid email or password
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:54:31 PM</td>
-        <td>
-          loginWithPasswordInvalid is passed.
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="3"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">loginWithEmailPasswordEmpty</p>
-            <p class="text-sm">
-              <span>11:54:32 PM</span> / <span>00:00:04:151</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">loginWithEmailPasswordEmpty</h5>
-<span class='badge badge-success'>01.17.2024 11:54:32 PM</span>
-<span class='badge badge-danger'>01.17.2024 11:54:36 PM</span>
-<span class='badge badge-default'>00:00:04:151</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5"></div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:33 PM</td>
-        <td>
-          Open URL: https://crm.anhtester.com/admin/authentication
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:34 PM</td>
-        <td>
-          Set text  on element By.xpath: //input[@id='email']
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:35 PM</td>
-        <td>
-          Set text  on element By.xpath: //input[@id='password']
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:36 PM</td>
-        <td>
-          Click on element By.xpath: //button[normalize-space()='Login']
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:36 PM</td>
-        <td>
-          Get text of element By.xpath: //div[normalize-space()='The Password field is required.']
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:36 PM</td>
-        <td>
-          ==> Text: The Password field is required.
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:36 PM</td>
-        <td>
-          Get text of element By.xpath: //div[normalize-space()='The Email Address field is required.']
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:36 PM</td>
-        <td>
-          ==> Text: The Email Address field is required.
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:54:36 PM</td>
-        <td>
-          loginWithEmailPasswordEmpty is passed.
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="4"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">loginWithEmailEmpty</p>
-            <p class="text-sm">
-              <span>11:54:38 PM</span> / <span>00:00:04:087</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">loginWithEmailEmpty</h5>
-<span class='badge badge-success'>01.17.2024 11:54:38 PM</span>
-<span class='badge badge-danger'>01.17.2024 11:54:42 PM</span>
-<span class='badge badge-default'>00:00:04:087</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5"></div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:39 PM</td>
-        <td>
-          Open URL: https://crm.anhtester.com/admin/authentication
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:39 PM</td>
-        <td>
-          Set text  on element By.xpath: //input[@id='email']
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:40 PM</td>
-        <td>
-          Set text 123456 on element By.xpath: //input[@id='password']
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:41 PM</td>
-        <td>
-          Click on element By.xpath: //button[normalize-space()='Login']
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:42 PM</td>
-        <td>
-          Get text of element By.xpath: //div[normalize-space()='The Email Address field is required.']
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:42 PM</td>
-        <td>
-          ==> Text: The Email Address field is required.
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:54:42 PM</td>
-        <td>
-          loginWithEmailEmpty is passed.
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="5"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">loginWithPasswordEmpty</p>
-            <p class="text-sm">
-              <span>11:54:43 PM</span> / <span>00:00:04:065</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">loginWithPasswordEmpty</h5>
-<span class='badge badge-success'>01.17.2024 11:54:43 PM</span>
-<span class='badge badge-danger'>01.17.2024 11:54:47 PM</span>
-<span class='badge badge-default'>00:00:04:065</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5"></div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:44 PM</td>
-        <td>
-          Open URL: https://crm.anhtester.com/admin/authentication
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:45 PM</td>
-        <td>
-          Set text admin@example.com on element By.xpath: //input[@id='email']
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:46 PM</td>
-        <td>
-          Set text  on element By.xpath: //input[@id='password']
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:47 PM</td>
-        <td>
-          Click on element By.xpath: //button[normalize-space()='Login']
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:47 PM</td>
-        <td>
-          Get text of element By.xpath: //div[normalize-space()='The Password field is required.']
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:47 PM</td>
-        <td>
-          ==> Text: The Password field is required.
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:54:47 PM</td>
-        <td>
-          loginWithPasswordEmpty is passed.
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="6"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">chooseCheckboxRemenber</p>
-            <p class="text-sm">
-              <span>11:54:49 PM</span> / <span>00:00:02:561</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">chooseCheckboxRemenber</h5>
-<span class='badge badge-success'>01.17.2024 11:54:49 PM</span>
-<span class='badge badge-danger'>01.17.2024 11:54:51 PM</span>
-<span class='badge badge-default'>00:00:02:561</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5"></div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:50 PM</td>
-        <td>
-          Open URL: https://crm.anhtester.com/admin/authentication
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:51 PM</td>
-        <td>
-          Click on element By.xpath: //label[normalize-space()='Remember me']
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:54:51 PM</td>
-        <td>
-          chooseCheckboxRemenber is passed.
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="7"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">loginSuccess</p>
-            <p class="text-sm">
-              <span>11:54:53 PM</span> / <span>00:00:09:874</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">loginSuccess</h5>
-<span class='badge badge-success'>01.17.2024 11:54:53 PM</span>
-<span class='badge badge-danger'>01.17.2024 11:55:03 PM</span>
-<span class='badge badge-default'>00:00:09:874</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5"></div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:54 PM</td>
-        <td>
-          Open URL: https://crm.anhtester.com/admin/authentication
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:55 PM</td>
-        <td>
-          Set text admin@example.com on element By.xpath: //input[@id='email']
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:54:56 PM</td>
-        <td>
-          Set text 123456 on element By.xpath: //input[@id='password']
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:55:00 PM</td>
-        <td>
-          Click on element By.xpath: //button[normalize-space()='Login']
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>11:55:02 PM</td>
-        <td>
-          Click on element By.xpath: //span[normalize-space()='Customers']
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>11:55:03 PM</td>
-        <td>
-          loginSuccess is passed.
+          createUserWithFirstNameInvalid is passed.
         </td>
       </tr>
   </tbody>
@@ -655,19 +228,19 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jan 17, 2024 11:54:19 PM</h3>
+<h3>Feb 27, 2024 04:47:06 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jan 17, 2024 11:55:03 PM</h3>
+<h3>Feb 27, 2024 04:47:22 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>7</h3>
+<h3>1</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -690,7 +263,7 @@
 </div>
 <div class="card-footer">
 <div><small data-tooltip='100%'>
-<b>7</b> tests passed
+<b>1</b> tests passed
 </small>
 </div>
 <div>
@@ -712,10 +285,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='15%'><b>7</b> events passed</small></div>
+<div><small data-tooltip='6%'><b>1</b> events passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>39</b> others
+<b data-tooltip='%'>14</b> others
 </small>
 </div>
 </div>
@@ -731,7 +304,7 @@
 </div></div>
 <script>
 var timeline = {
-"loginWithEmailInvalid":4.59,"loginWithPasswordInvalid":4.275,"loginWithEmailPasswordEmpty":4.151,"loginWithEmailEmpty":4.087,"loginWithPasswordEmpty":4.065,"chooseCheckboxRemenber":2.561,"loginSuccess":9.874
+"createUserWithFirstNameInvalid":14.909
 };
 </script>
 <div class="row">
@@ -740,7 +313,7 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 7,
+passParent: 1,
 failParent: 0,
 warningParent: 0,
 skipParent: 0,
@@ -757,11 +330,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 7,
+passEvents: 1,
 failEvents: 0,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 39
+infoEvents: 14
 };
 </script>        </div>
       </div>
