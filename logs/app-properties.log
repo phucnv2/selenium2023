@@ -452,3 +452,342 @@
 [INFO] 27-02-2024 16:47:21 [main] LogUtils - Text show By.xpath: //p[@id='firstname-error']
 [INFO] 27-02-2024 16:47:21 [main] LogUtils - Get text of element By.xpath: //p[@id='firstname-error'] is: This field is required.
 [INFO] 27-02-2024 16:47:21 [main] LogUtils - ==> createUserWithFirstNameInvalid is successfully.
+[INFO] 07-03-2024 00:09:21 [TestNG-PoolService-0] LogUtils - *********createUserSuccessAndLoginSuccess*********
+[INFO] 07-03-2024 00:09:24 [TestNG-PoolService-0] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 07-03-2024 00:09:25 [TestNG-PoolService-0] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 00:09:26 [TestNG-PoolService-0] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 07-03-2024 00:09:29 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 07-03-2024 00:09:29 [TestNG-PoolService-0] LogUtils - Get current URL is: authentication
+[INFO] 07-03-2024 00:09:31 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 07-03-2024 00:09:33 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 07-03-2024 00:09:35 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 07-03-2024 00:09:36 [TestNG-PoolService-0] LogUtils - Get current URL is: /staff
+[INFO] 07-03-2024 00:09:36 [TestNG-PoolService-0] LogUtils - Set text Phuc on input By.xpath: //input[@id='firstname']
+[INFO] 07-03-2024 00:09:37 [TestNG-PoolService-0] LogUtils - Set text Van on input By.xpath: //input[@id='lastname']
+[INFO] 07-03-2024 00:09:38 [TestNG-PoolService-0] LogUtils - Set text phuctho1996@gmail.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 00:09:38 [TestNG-PoolService-0] LogUtils - Set text 0965339606 on input By.xpath: //input[@id='phonenumber']
+[INFO] 07-03-2024 00:09:40 [TestNG-PoolService-0] LogUtils - Set text 123456 on input By.xpath: //input[@name='password']
+[INFO] 07-03-2024 00:09:41 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //button[normalize-space()='Save']
+[ERROR] 07-03-2024 00:09:52 [TestNG-PoolService-0] LogUtils - Timeout waiting for the element Visible. By.xpath: //span[@id='arler-title']
+[ERROR] 07-03-2024 00:09:52 [TestNG-PoolService-0] LogUtils - ==> createUserSuccessAndLoginSuccess is FAIL.
+[INFO] 07-03-2024 00:16:58 [TestNG-PoolService-0] LogUtils - *********createUserSuccessAndLoginSuccess*********
+[INFO] 07-03-2024 00:17:01 [TestNG-PoolService-0] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 07-03-2024 00:17:01 [TestNG-PoolService-0] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 00:17:02 [TestNG-PoolService-0] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 07-03-2024 00:17:06 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 07-03-2024 00:17:06 [TestNG-PoolService-0] LogUtils - Get current URL is: authentication
+[INFO] 07-03-2024 00:17:07 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 07-03-2024 00:17:09 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 07-03-2024 00:17:10 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 07-03-2024 00:17:11 [TestNG-PoolService-0] LogUtils - Get current URL is: /staff
+[INFO] 07-03-2024 00:17:11 [TestNG-PoolService-0] LogUtils - Set text Phuc on input By.xpath: //input[@id='firstname']
+[INFO] 07-03-2024 00:17:12 [TestNG-PoolService-0] LogUtils - Set text Van on input By.xpath: //input[@id='lastname']
+[INFO] 07-03-2024 00:17:13 [TestNG-PoolService-0] LogUtils - Set text phuctho1996@gmail.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 00:17:14 [TestNG-PoolService-0] LogUtils - Set text 0965339606 on input By.xpath: //input[@id='phonenumber']
+[INFO] 07-03-2024 00:17:14 [TestNG-PoolService-0] LogUtils - Set text 123456 on input By.xpath: //input[@name='password']
+[INFO] 07-03-2024 00:17:16 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //button[normalize-space()='Save']
+[INFO] 07-03-2024 00:17:17 [TestNG-PoolService-0] LogUtils - Text show By.xpath: //span[contains(text(),'Staff Member added successfully.')]
+[INFO] 07-03-2024 00:17:17 [TestNG-PoolService-0] LogUtils - Get text of element By.xpath: //span[contains(text(),'Staff Member added successfully.')] is: Staff Member added successfully.
+[INFO] 07-03-2024 00:17:17 [TestNG-PoolService-0] LogUtils - ==> createUserSuccessAndLoginSuccess is successfully.
+[INFO] 07-03-2024 00:18:07 [TestNG-PoolService-0] LogUtils - *********createUserSuccessAndLoginSuccess*********
+[INFO] 07-03-2024 00:18:10 [TestNG-PoolService-0] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 07-03-2024 00:18:10 [TestNG-PoolService-0] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 00:18:11 [TestNG-PoolService-0] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 07-03-2024 00:18:15 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 07-03-2024 00:18:16 [TestNG-PoolService-0] LogUtils - Get current URL is: authentication
+[INFO] 07-03-2024 00:18:17 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 07-03-2024 00:18:18 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 07-03-2024 00:18:20 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 07-03-2024 00:18:20 [TestNG-PoolService-0] LogUtils - Get current URL is: /staff
+[INFO] 07-03-2024 00:18:21 [TestNG-PoolService-0] LogUtils - Set text Phuc on input By.xpath: //input[@id='firstname']
+[INFO] 07-03-2024 00:18:22 [TestNG-PoolService-0] LogUtils - Set text Van on input By.xpath: //input[@id='lastname']
+[INFO] 07-03-2024 00:18:23 [TestNG-PoolService-0] LogUtils - Set text phuctho1996@gmail.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 00:18:23 [TestNG-PoolService-0] LogUtils - Set text 0965339606 on input By.xpath: //input[@id='phonenumber']
+[INFO] 07-03-2024 00:18:24 [TestNG-PoolService-0] LogUtils - Set text 123456 on input By.xpath: //input[@name='password']
+[INFO] 07-03-2024 00:18:26 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //button[normalize-space()='Save']
+[INFO] 07-03-2024 00:18:26 [TestNG-PoolService-0] LogUtils - Text show By.xpath: //span[contains(text(),'Staff Member added successfully.')]
+[INFO] 07-03-2024 00:18:26 [TestNG-PoolService-0] LogUtils - Get text of element By.xpath: //span[contains(text(),'Staff Member added successfully.')] is: Staff Member added successfully.
+[ERROR] 07-03-2024 00:18:26 [TestNG-PoolService-0] LogUtils - ==> createUserSuccessAndLoginSuccess is FAIL.
+[INFO] 07-03-2024 00:19:09 [TestNG-PoolService-0] LogUtils - *********createUserSuccessAndLoginSuccess*********
+[INFO] 07-03-2024 00:19:12 [TestNG-PoolService-0] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 07-03-2024 00:19:12 [TestNG-PoolService-0] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 00:19:13 [TestNG-PoolService-0] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 07-03-2024 00:19:16 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 07-03-2024 00:19:16 [TestNG-PoolService-0] LogUtils - Get current URL is: authentication
+[INFO] 07-03-2024 00:19:18 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 07-03-2024 00:19:20 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 07-03-2024 00:19:22 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 07-03-2024 00:19:23 [TestNG-PoolService-0] LogUtils - Get current URL is: /staff
+[INFO] 07-03-2024 00:19:23 [TestNG-PoolService-0] LogUtils - Set text Phuc on input By.xpath: //input[@id='firstname']
+[INFO] 07-03-2024 00:19:24 [TestNG-PoolService-0] LogUtils - Set text Van on input By.xpath: //input[@id='lastname']
+[INFO] 07-03-2024 00:19:25 [TestNG-PoolService-0] LogUtils - Set text phuctho1996@gmail.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 00:19:26 [TestNG-PoolService-0] LogUtils - Set text 0965339606 on input By.xpath: //input[@id='phonenumber']
+[INFO] 07-03-2024 00:19:27 [TestNG-PoolService-0] LogUtils - Set text 123456 on input By.xpath: //input[@name='password']
+[INFO] 07-03-2024 00:19:28 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //button[normalize-space()='Save']
+[ERROR] 07-03-2024 00:19:38 [TestNG-PoolService-0] LogUtils - Timeout waiting for the element Visible. By.xpath: //span[contains(text(),'Staff Member added successfully.')]
+[ERROR] 07-03-2024 00:19:38 [TestNG-PoolService-0] LogUtils - ==> createUserSuccessAndLoginSuccess is FAIL.
+[INFO] 07-03-2024 00:20:05 [TestNG-PoolService-0] LogUtils - *********createUserSuccessAndLoginSuccess*********
+[INFO] 07-03-2024 00:20:08 [TestNG-PoolService-0] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 07-03-2024 00:20:09 [TestNG-PoolService-0] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 00:20:09 [TestNG-PoolService-0] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 07-03-2024 00:20:13 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 07-03-2024 00:20:13 [TestNG-PoolService-0] LogUtils - Get current URL is: authentication
+[INFO] 07-03-2024 00:20:14 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 07-03-2024 00:20:16 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 07-03-2024 00:20:18 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 07-03-2024 00:20:18 [TestNG-PoolService-0] LogUtils - Get current URL is: /staff
+[INFO] 07-03-2024 00:20:19 [TestNG-PoolService-0] LogUtils - Set text Phuc on input By.xpath: //input[@id='firstname']
+[INFO] 07-03-2024 00:20:20 [TestNG-PoolService-0] LogUtils - Set text Van on input By.xpath: //input[@id='lastname']
+[INFO] 07-03-2024 00:20:21 [TestNG-PoolService-0] LogUtils - Set text phuctho1996@gmail.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 00:20:21 [TestNG-PoolService-0] LogUtils - Set text 0965339606 on input By.xpath: //input[@id='phonenumber']
+[INFO] 07-03-2024 00:20:22 [TestNG-PoolService-0] LogUtils - Set text 123456 on input By.xpath: //input[@name='password']
+[INFO] 07-03-2024 00:20:24 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //button[normalize-space()='Save']
+[INFO] 07-03-2024 00:20:24 [TestNG-PoolService-0] LogUtils - Text show By.xpath: //span[contains(text(),'Staff Member added successfully.')]
+[INFO] 07-03-2024 00:20:24 [TestNG-PoolService-0] LogUtils - Get text of element By.xpath: //span[contains(text(),'Staff Member added successfully.')] is: Staff Member added successfully.
+[ERROR] 07-03-2024 00:20:27 [TestNG-PoolService-0] LogUtils - ==> createUserSuccessAndLoginSuccess is FAIL.
+[INFO] 07-03-2024 00:21:26 [TestNG-PoolService-0] LogUtils - *********createUserSuccessAndLoginSuccess*********
+[INFO] 07-03-2024 00:21:28 [TestNG-PoolService-0] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 07-03-2024 00:21:29 [TestNG-PoolService-0] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 00:21:30 [TestNG-PoolService-0] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 07-03-2024 00:21:33 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 07-03-2024 00:21:33 [TestNG-PoolService-0] LogUtils - Get current URL is: authentication
+[INFO] 07-03-2024 00:21:34 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 07-03-2024 00:21:37 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 07-03-2024 00:21:39 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 07-03-2024 00:21:39 [TestNG-PoolService-0] LogUtils - Get current URL is: /staff
+[INFO] 07-03-2024 00:21:40 [TestNG-PoolService-0] LogUtils - Set text Phuc on input By.xpath: //input[@id='firstname']
+[INFO] 07-03-2024 00:21:40 [TestNG-PoolService-0] LogUtils - Set text Van on input By.xpath: //input[@id='lastname']
+[INFO] 07-03-2024 00:21:41 [TestNG-PoolService-0] LogUtils - Set text phuctho1996@gmail.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 00:21:42 [TestNG-PoolService-0] LogUtils - Set text 0965339606 on input By.xpath: //input[@id='phonenumber']
+[INFO] 07-03-2024 00:21:43 [TestNG-PoolService-0] LogUtils - Set text 123456 on input By.xpath: //input[@name='password']
+[INFO] 07-03-2024 00:21:44 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //button[normalize-space()='Save']
+[INFO] 07-03-2024 00:21:45 [TestNG-PoolService-0] LogUtils - Text show By.xpath: //span[contains(text(),'Staff Member added successfully.')]
+[INFO] 07-03-2024 00:21:45 [TestNG-PoolService-0] LogUtils - Get text of element By.xpath: //span[contains(text(),'Staff Member added successfully.')] is: Staff Member added successfully.
+[INFO] 07-03-2024 00:21:49 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //li[@class='icon header-user-profile']//a[@data-toggle='dropdown']
+[INFO] 07-03-2024 00:21:51 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //ul[@class='dropdown-menu animated fadeIn']//li//a[normalize-space()='Logout']
+[INFO] 07-03-2024 00:21:51 [TestNG-PoolService-0] LogUtils - ==> createUserSuccessAndLoginSuccess is successfully.
+[INFO] 07-03-2024 00:30:42 [TestNG-PoolService-0] LogUtils - *********createUserSuccessAndLoginSuccess*********
+[INFO] 07-03-2024 00:30:44 [TestNG-PoolService-0] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 07-03-2024 00:30:45 [TestNG-PoolService-0] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 00:30:46 [TestNG-PoolService-0] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 07-03-2024 00:30:49 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 07-03-2024 00:30:49 [TestNG-PoolService-0] LogUtils - Get current URL is: authentication
+[INFO] 07-03-2024 00:30:51 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 07-03-2024 00:30:52 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 07-03-2024 00:30:54 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 07-03-2024 00:30:54 [TestNG-PoolService-0] LogUtils - Get current URL is: /staff
+[INFO] 07-03-2024 00:30:54 [TestNG-PoolService-0] LogUtils - Set text Phuc on input By.xpath: //input[@id='firstname']
+[INFO] 07-03-2024 00:30:55 [TestNG-PoolService-0] LogUtils - Set text Van on input By.xpath: //input[@id='lastname']
+[INFO] 07-03-2024 00:30:56 [TestNG-PoolService-0] LogUtils - Set text phuctho1996@gmail.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 00:30:56 [TestNG-PoolService-0] LogUtils - Set text 0965339606 on input By.xpath: //input[@id='phonenumber']
+[INFO] 07-03-2024 00:30:57 [TestNG-PoolService-0] LogUtils - Set text 123456 on input By.xpath: //input[@name='password']
+[INFO] 07-03-2024 00:30:59 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //button[normalize-space()='Save']
+[INFO] 07-03-2024 00:31:00 [TestNG-PoolService-0] LogUtils - Text show By.xpath: //span[contains(text(),'Staff Member added successfully.')]
+[INFO] 07-03-2024 00:31:00 [TestNG-PoolService-0] LogUtils - Get text of element By.xpath: //span[contains(text(),'Staff Member added successfully.')] is: Staff Member added successfully.
+[INFO] 07-03-2024 00:31:04 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //li[@class='icon header-user-profile']//a[@data-toggle='dropdown']
+[INFO] 07-03-2024 00:31:05 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //ul[@class='dropdown-menu animated fadeIn']//li//a[normalize-space()='Logout']
+[INFO] 07-03-2024 00:31:06 [TestNG-PoolService-0] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 07-03-2024 00:31:06 [TestNG-PoolService-0] LogUtils - Set text phuctho1996@gmail.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 00:31:07 [TestNG-PoolService-0] LogUtils - Set text 123456 on input By.xpath: //input[@id='password']
+[INFO] 07-03-2024 00:31:09 [TestNG-PoolService-0] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 07-03-2024 00:31:09 [TestNG-PoolService-0] LogUtils - Get current URL is: authentication
+[INFO] 07-03-2024 00:31:09 [TestNG-PoolService-0] LogUtils - ==> createUserSuccessAndLoginSuccess is successfully.
+[INFO] 07-03-2024 21:49:28 [main] LogUtils - *********uploadImage*********
+[INFO] 07-03-2024 21:49:31 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 07-03-2024 21:49:31 [main] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 21:49:32 [main] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 07-03-2024 21:49:36 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 07-03-2024 21:49:36 [main] LogUtils - Get current URL is: authentication
+[INFO] 07-03-2024 21:49:38 [main] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 07-03-2024 21:49:40 [main] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 07-03-2024 21:49:42 [main] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 07-03-2024 21:49:42 [main] LogUtils - ==> uploadImage is successfully.
+[INFO] 07-03-2024 22:37:42 [main] LogUtils - *********uploadImage*********
+[INFO] 07-03-2024 22:37:44 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 07-03-2024 22:37:45 [main] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 22:37:46 [main] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 07-03-2024 22:37:51 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 07-03-2024 22:37:51 [main] LogUtils - Get current URL is: authentication
+[INFO] 07-03-2024 22:37:52 [main] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 07-03-2024 22:37:54 [main] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 07-03-2024 22:37:56 [main] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[ERROR] 07-03-2024 22:38:06 [main] LogUtils - Timeout waiting for the element Visible. By.xpath: //span[contains(text(),'Staff Member added successfully.')]
+[ERROR] 07-03-2024 22:38:06 [main] LogUtils - ==> uploadImage is FAIL.
+[INFO] 07-03-2024 22:43:59 [main] LogUtils - *********uploadImage*********
+[INFO] 07-03-2024 22:44:02 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 07-03-2024 22:44:03 [main] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 22:44:04 [main] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 07-03-2024 22:44:05 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 07-03-2024 22:44:05 [main] LogUtils - Get current URL is: authentication
+[ERROR] 07-03-2024 22:44:05 [main] LogUtils - Timeout waiting for the element ready to click. By.xpath: //a[@class='open-customizer']
+[ERROR] 07-03-2024 22:44:05 [main] LogUtils - ==> uploadImage is FAIL.
+[INFO] 07-03-2024 22:44:33 [main] LogUtils - *********uploadImage*********
+[INFO] 07-03-2024 22:44:35 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 07-03-2024 22:44:36 [main] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 22:44:37 [main] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 07-03-2024 22:44:38 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 07-03-2024 22:44:38 [main] LogUtils - Get current URL is: authentication
+[ERROR] 07-03-2024 22:44:38 [main] LogUtils - Timeout waiting for the element ready to click. By.xpath: //a[@class='open-customizer']
+[ERROR] 07-03-2024 22:44:38 [main] LogUtils - ==> uploadImage is FAIL.
+[INFO] 07-03-2024 22:46:25 [main] LogUtils - *********uploadImage*********
+[INFO] 07-03-2024 22:46:27 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 07-03-2024 22:46:28 [main] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 22:46:29 [main] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 07-03-2024 22:46:30 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 07-03-2024 22:46:30 [main] LogUtils - Get current URL is: authentication
+[ERROR] 07-03-2024 22:46:30 [main] LogUtils - Timeout waiting for the element ready to click. By.xpath: //a[@class='open-customizer']
+[ERROR] 07-03-2024 22:46:30 [main] LogUtils - ==> uploadImage is FAIL.
+[INFO] 07-03-2024 22:47:38 [main] LogUtils - *********uploadImage*********
+[INFO] 07-03-2024 22:47:41 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 07-03-2024 22:47:41 [main] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 22:47:42 [main] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 07-03-2024 22:47:45 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 07-03-2024 22:47:45 [main] LogUtils - Get current URL is: authentication
+[INFO] 07-03-2024 22:47:47 [main] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 07-03-2024 22:47:48 [main] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 07-03-2024 22:47:50 [main] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 07-03-2024 22:47:51 [main] LogUtils - Set text D:\NguyenVanPhuc/src/test/resources/picture/profile_contact.png on input By.xpath: //input[@id='profile_image']
+[INFO] 07-03-2024 22:47:51 [main] LogUtils - ==> uploadImage is successfully.
+[INFO] 07-03-2024 22:48:19 [main] LogUtils - *********uploadImage*********
+[INFO] 07-03-2024 22:48:21 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 07-03-2024 22:48:22 [main] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 22:48:22 [main] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 07-03-2024 22:48:25 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 07-03-2024 22:48:25 [main] LogUtils - Get current URL is: authentication
+[INFO] 07-03-2024 22:48:26 [main] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 07-03-2024 22:48:29 [main] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 07-03-2024 22:48:31 [main] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 07-03-2024 22:48:32 [main] LogUtils - Set text D:\NguyenVanPhuc/src/test/resources/picture/profile_contact.png on input By.xpath: //input[@id='profile_image']
+[INFO] 07-03-2024 22:48:34 [main] LogUtils - ==> uploadImage is successfully.
+[INFO] 07-03-2024 23:21:28 [main] LogUtils - *********uploadImage*********
+[INFO] 07-03-2024 23:21:31 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 07-03-2024 23:21:32 [main] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 23:21:32 [main] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 07-03-2024 23:21:35 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 07-03-2024 23:21:35 [main] LogUtils - Get current URL is: authentication
+[INFO] 07-03-2024 23:21:37 [main] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 07-03-2024 23:21:38 [main] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 07-03-2024 23:21:40 [main] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 07-03-2024 23:21:41 [main] LogUtils - Set text D:\NguyenVanPhuc\src/test/resources/picture/profile_contact.png on input By.xpath: //input[@id='profile_image']
+[INFO] 07-03-2024 23:21:41 [main] LogUtils - Set text firstName on input By.xpath: //input[@id='firstname']
+[INFO] 07-03-2024 23:21:42 [main] LogUtils - Set text lastName on input By.xpath: //input[@id='lastname']
+[INFO] 07-03-2024 23:21:43 [main] LogUtils - Set text phuc1234@gmail.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 23:21:43 [main] LogUtils - Set text 0965339606 on input By.xpath: //input[@id='phonenumber']
+[ERROR] 07-03-2024 23:21:44 [main] LogUtils - ==> uploadImage is FAIL.
+[INFO] 07-03-2024 23:22:28 [main] LogUtils - *********uploadImage*********
+[INFO] 07-03-2024 23:22:31 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 07-03-2024 23:22:31 [main] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 23:22:32 [main] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 07-03-2024 23:22:35 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 07-03-2024 23:22:35 [main] LogUtils - Get current URL is: authentication
+[INFO] 07-03-2024 23:22:36 [main] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 07-03-2024 23:22:38 [main] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 07-03-2024 23:22:40 [main] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 07-03-2024 23:22:41 [main] LogUtils - Set text D:\NguyenVanPhuc\src/test/resources/picture/profile_contact.png on input By.xpath: //input[@id='profile_image']
+[INFO] 07-03-2024 23:22:41 [main] LogUtils - Set text firstName on input By.xpath: //input[@id='firstname']
+[INFO] 07-03-2024 23:22:42 [main] LogUtils - Set text lastName on input By.xpath: //input[@id='lastname']
+[INFO] 07-03-2024 23:22:43 [main] LogUtils - Set text phuc1234@gmail.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 23:22:44 [main] LogUtils - Set text 0965339606 on input By.xpath: //input[@id='phonenumber']
+[ERROR] 07-03-2024 23:22:44 [main] LogUtils - ==> uploadImage is FAIL.
+[INFO] 07-03-2024 23:24:32 [main] LogUtils - *********uploadImage*********
+[INFO] 07-03-2024 23:24:35 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 07-03-2024 23:24:36 [main] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 23:24:36 [main] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 07-03-2024 23:24:40 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 07-03-2024 23:24:40 [main] LogUtils - Get current URL is: authentication
+[INFO] 07-03-2024 23:24:41 [main] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 07-03-2024 23:24:43 [main] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 07-03-2024 23:24:45 [main] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 07-03-2024 23:24:46 [main] LogUtils - Set text D:\NguyenVanPhuc\src/test/resources/picture/profile_contact.png on input By.xpath: //input[@id='profile_image']
+[INFO] 07-03-2024 23:24:46 [main] LogUtils - Set text firstName on input By.xpath: //input[@id='firstname']
+[INFO] 07-03-2024 23:24:47 [main] LogUtils - Set text lastName on input By.xpath: //input[@id='lastname']
+[INFO] 07-03-2024 23:24:48 [main] LogUtils - Set text phuc1234@gmail.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 23:24:49 [main] LogUtils - Set text 0965339606 on input By.xpath: //input[@id='phonenumber']
+[ERROR] 07-03-2024 23:24:49 [main] LogUtils - ==> uploadImage is FAIL.
+[INFO] 07-03-2024 23:25:17 [main] LogUtils - *********uploadImage*********
+[INFO] 07-03-2024 23:25:19 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 07-03-2024 23:25:20 [main] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 23:25:21 [main] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 07-03-2024 23:25:24 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 07-03-2024 23:25:24 [main] LogUtils - Get current URL is: authentication
+[INFO] 07-03-2024 23:25:25 [main] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 07-03-2024 23:25:27 [main] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 07-03-2024 23:25:29 [main] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 07-03-2024 23:25:30 [main] LogUtils - Set text D:\NguyenVanPhuc\src/test/resources/picture/profile_contact.png on input By.xpath: //input[@id='profile_image']
+[INFO] 07-03-2024 23:25:31 [main] LogUtils - Set text firstName on input By.xpath: //input[@id='firstname']
+[INFO] 07-03-2024 23:25:32 [main] LogUtils - Set text lastName on input By.xpath: //input[@id='lastname']
+[INFO] 07-03-2024 23:25:32 [main] LogUtils - Set text phuc1234@gmail.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 23:25:33 [main] LogUtils - Set text 0965339606 on input By.xpath: //input[@id='phonenumber']
+[ERROR] 07-03-2024 23:25:33 [main] LogUtils - ==> uploadImage is FAIL.
+[INFO] 07-03-2024 23:26:29 [main] LogUtils - *********uploadImage*********
+[INFO] 07-03-2024 23:26:32 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 07-03-2024 23:26:32 [main] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 23:26:33 [main] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 07-03-2024 23:26:34 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 07-03-2024 23:26:36 [main] LogUtils - Get current URL is: authentication
+[INFO] 07-03-2024 23:26:38 [main] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 07-03-2024 23:26:40 [main] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 07-03-2024 23:26:41 [main] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 07-03-2024 23:26:42 [main] LogUtils - Set text D:\NguyenVanPhuc\src/test/resources/picture/profile_contact.png on input By.xpath: //input[@id='profile_image']
+[INFO] 07-03-2024 23:26:42 [main] LogUtils - Set text firstName on input By.xpath: //input[@id='firstname']
+[INFO] 07-03-2024 23:26:43 [main] LogUtils - Set text lastName on input By.xpath: //input[@id='lastname']
+[INFO] 07-03-2024 23:26:44 [main] LogUtils - Set text phuc1234@gmail.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 23:26:44 [main] LogUtils - Set text 0965339606 on input By.xpath: //input[@id='phonenumber']
+[INFO] 07-03-2024 23:26:45 [main] LogUtils - Set text 1 on input By.xpath: //input[@name='password']
+[INFO] 07-03-2024 23:26:47 [main] LogUtils - Click on element By.xpath: //a[normalize-space()='Permissions']
+[INFO] 07-03-2024 23:26:49 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Save']
+[INFO] 07-03-2024 23:26:51 [main] LogUtils - ==> uploadImage is successfully.
+[INFO] 07-03-2024 23:28:28 [main] LogUtils - *********uploadImage*********
+[INFO] 07-03-2024 23:28:31 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 07-03-2024 23:28:31 [main] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 23:28:32 [main] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 07-03-2024 23:28:36 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 07-03-2024 23:28:36 [main] LogUtils - Get current URL is: authentication
+[INFO] 07-03-2024 23:28:37 [main] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 07-03-2024 23:28:39 [main] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 07-03-2024 23:28:41 [main] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 07-03-2024 23:28:42 [main] LogUtils - Set text D:\NguyenVanPhuc\src/test/resources/picture/profile_contact.png on input By.xpath: //input[@id='profile_image']
+[INFO] 07-03-2024 23:28:43 [main] LogUtils - Set text firstName on input By.xpath: //input[@id='firstname']
+[INFO] 07-03-2024 23:28:43 [main] LogUtils - Set text lastName on input By.xpath: //input[@id='lastname']
+[INFO] 07-03-2024 23:28:44 [main] LogUtils - Set text phuc1234@gmail.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 23:28:44 [main] LogUtils - Set text 0965339606 on input By.xpath: //input[@id='phonenumber']
+[INFO] 07-03-2024 23:28:45 [main] LogUtils - Set text 1 on input By.xpath: //input[@name='password']
+[INFO] 07-03-2024 23:28:47 [main] LogUtils - Click on element By.xpath: //a[normalize-space()='Permissions']
+[INFO] 07-03-2024 23:28:49 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Save']
+[INFO] 07-03-2024 23:28:49 [main] LogUtils - Text show By.xpath: //span[contains(text(),'Staff Member added successfully.')]
+[INFO] 07-03-2024 23:28:49 [main] LogUtils - Get text of element By.xpath: //span[contains(text(),'Staff Member added successfully.')] is: Staff Member added successfully.
+[INFO] 07-03-2024 23:28:54 [main] LogUtils - Click on element By.xpath: //li[@class='icon header-user-profile']//a[@data-toggle='dropdown']
+[INFO] 07-03-2024 23:28:55 [main] LogUtils - Click on element By.xpath: //ul[@class='dropdown-menu animated fadeIn']//li//a[normalize-space()='Logout']
+[INFO] 07-03-2024 23:28:55 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 07-03-2024 23:28:56 [main] LogUtils - Set text phuc1234@gmail.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 23:28:57 [main] LogUtils - Set text 1 on input By.xpath: //input[@id='password']
+[INFO] 07-03-2024 23:28:58 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 07-03-2024 23:28:59 [main] LogUtils - Get current URL is: authentication
+[INFO] 07-03-2024 23:28:59 [main] LogUtils - ==> uploadImage is successfully.
+[INFO] 07-03-2024 23:29:32 [main] LogUtils - *********uploadImage*********
+[INFO] 07-03-2024 23:29:34 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 07-03-2024 23:29:35 [main] LogUtils - Set text anhtester@email.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 23:29:36 [main] LogUtils - Set text AnhTester@2023# on input By.xpath: //input[@id='password']
+[INFO] 07-03-2024 23:29:40 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 07-03-2024 23:29:40 [main] LogUtils - Get current URL is: authentication
+[INFO] 07-03-2024 23:29:41 [main] LogUtils - Click on element By.xpath: //a[@class='open-customizer']
+[INFO] 07-03-2024 23:29:43 [main] LogUtils - Click on element By.xpath: //a[@href='https://crm.anhtester.com/admin/staff']
+[INFO] 07-03-2024 23:29:44 [main] LogUtils - Click on element By.xpath: //a[normalize-space()='New Staff Member']
+[INFO] 07-03-2024 23:29:45 [main] LogUtils - Set text D:\NguyenVanPhuc\src/test/resources/picture/profile_contact.png on input By.xpath: //input[@id='profile_image']
+[INFO] 07-03-2024 23:29:46 [main] LogUtils - Set text firstName on input By.xpath: //input[@id='firstname']
+[INFO] 07-03-2024 23:29:46 [main] LogUtils - Set text lastName on input By.xpath: //input[@id='lastname']
+[INFO] 07-03-2024 23:29:47 [main] LogUtils - Set text phuc1234@gmail.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 23:29:48 [main] LogUtils - Set text 0965339606 on input By.xpath: //input[@id='phonenumber']
+[INFO] 07-03-2024 23:29:49 [main] LogUtils - Set text 1 on input By.xpath: //input[@name='password']
+[INFO] 07-03-2024 23:29:50 [main] LogUtils - Click on element By.xpath: //a[normalize-space()='Permissions']
+[INFO] 07-03-2024 23:29:52 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Save']
+[INFO] 07-03-2024 23:29:53 [main] LogUtils - Text show By.xpath: //span[contains(text(),'Staff Member added successfully.')]
+[INFO] 07-03-2024 23:29:53 [main] LogUtils - Get text of element By.xpath: //span[contains(text(),'Staff Member added successfully.')] is: Staff Member added successfully.
+[INFO] 07-03-2024 23:29:57 [main] LogUtils - Click on element By.xpath: //li[@class='icon header-user-profile']//a[@data-toggle='dropdown']
+[INFO] 07-03-2024 23:29:58 [main] LogUtils - Click on element By.xpath: //ul[@class='dropdown-menu animated fadeIn']//li//a[normalize-space()='Logout']
+[INFO] 07-03-2024 23:29:59 [main] LogUtils - Open URL: https://crm.anhtester.com/admin/authentication
+[INFO] 07-03-2024 23:29:59 [main] LogUtils - Set text phuc1234@gmail.com on input By.xpath: //input[@id='email']
+[INFO] 07-03-2024 23:30:00 [main] LogUtils - Set text 1 on input By.xpath: //input[@id='password']
+[INFO] 07-03-2024 23:30:02 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 07-03-2024 23:30:02 [main] LogUtils - Get current URL is: authentication
+[INFO] 07-03-2024 23:30:05 [main] LogUtils - ==> uploadImage is successfully.

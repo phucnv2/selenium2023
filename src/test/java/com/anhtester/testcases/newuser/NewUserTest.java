@@ -6,6 +6,7 @@ import com.anhtester.dataprovider.dataProviderExcel;
 import com.anhtester.helpers.CaptureHelper;
 import com.anhtester.pages.Dashboard.DashboardPage;
 import com.anhtester.pages.Logins.LoginPage;
+import com.anhtester.pages.Logout.LogoutPage;
 import com.anhtester.pages.NewUser.CreateUserPage;
 import org.testng.annotations.Test;
 
@@ -15,6 +16,7 @@ public class NewUserTest extends BaseTest {
     LoginPage loginPage;
     DashboardPage dashboardPage;
     CreateUserPage createUserPage;
+    LogoutPage logoutPage;
     @Test(priority = 1, dataProvider = "dataUser", dataProviderClass = dataProviderExcel.class)
     public void createUserSuccess(String firstName, String lastName, String email, String phone, String password, String language) {
         loginPage = new LoginPage();
@@ -88,17 +90,42 @@ public class NewUserTest extends BaseTest {
         createUserPage.verifyInvalid("firstName","firstName","email","");
         createUserPage.verifyPasswordInvalid();
     }
-    //    @Test
-//    public void createUserSuccess1(String firstName, String lastName, String email, String phone, String password, String language) {
-//        loginPage = new LoginPage();
-//        dashboardPage = loginPage.loginCRM(email, password);
-//        dashboardPage = loginPage.loginCRM(ConfigData.SUPPER_EMAIL, ConfigData.SUPPER_PASSWORD);
-//       CaptureHelper.captureScreenshot("loginSuccess");
-//        loginPage.verifyLoginSuccess();
-//        createUserPage = dashboardPage.clickMenuSetup();
-//        createUserPage.clickMenuStaff();
-//        createUserPage.clickNewStaffMember();
-//        createUserPage.verifyStaffPage();
-//        createUserPage.verifyFirstNameInvalid("",lastName,email,password);
-//    }
+    @Test(priority = 1, dataProvider = "dataUser", dataProviderClass = dataProviderExcel.class)
+    public void createUserSuccessAndLoginSuccess(String firstName, String lastName, String email, String phone, String password, String language) {
+        loginPage = new LoginPage();
+        dashboardPage = loginPage.loginCRM(ConfigData.SUPPER_EMAIL, ConfigData.SUPPER_PASSWORD);
+        loginPage.verifyLoginSuccess();
+        createUserPage = dashboardPage.clickMenuSetup();
+        createUserPage.clickMenuStaff();
+        createUserPage.clickNewStaffMember();
+        createUserPage.verifyStaffPage();
+        createUserPage.insertInfomtionUser(firstName,lastName,email,phone,language, password);
+        createUserPage.verifyCreateUserSuccess();
+        sleep(3);
+        logoutPage = new LogoutPage();
+        logoutPage.clickAdminIcon();
+        logoutPage.clickLogoutButton();
+        loginPage = new LoginPage();
+        dashboardPage = loginPage.loginCRM("phuctho1996@gmail.com","123456");
+        loginPage.verifyLoginSuccess();
+    }
+    @Test
+    public void uploadImage(){
+        loginPage = new LoginPage();
+        dashboardPage = loginPage.loginCRM(ConfigData.SUPPER_EMAIL, ConfigData.SUPPER_PASSWORD);
+        loginPage.verifyLoginSuccess();
+        createUserPage = dashboardPage.clickMenuSetup();
+        createUserPage.clickMenuStaff();
+        createUserPage.clickNewStaffMember();
+        createUserPage.insertInfomtionUser_1("firstName","lastName","phuc1234@gmail.com","0965339606","1", "Vietnamese","Admin Example");
+        createUserPage.verifyCreateUserSuccess();
+        sleep(3);
+        logoutPage = new LogoutPage();
+        logoutPage.clickAdminIcon();
+        logoutPage.clickLogoutButton();
+        loginPage = new LoginPage();
+        dashboardPage = loginPage.loginCRM("phuc1234@gmail.com","1");
+        loginPage.verifyLoginSuccess();
+        sleep(3);
+    }
 }

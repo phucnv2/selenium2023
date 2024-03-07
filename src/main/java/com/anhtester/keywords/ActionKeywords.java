@@ -96,6 +96,13 @@ public class ActionKeywords {
         LogUtils.info("Set text " + text + " on input " + by);
         ExtentTestManager.logMessage(Status.INFO, "Set text " + text + " on element " + by);
     }
+    public static void uploadFile(By by, String text) {
+        waitForElementVisible(by);
+        highLightElement(by);
+        DriverManager.getDriver().findElement(by).sendKeys(text);
+        LogUtils.info("Set text " + text + " on input " + by);
+        ExtentTestManager.logMessage(Status.INFO, "Set text " + text + " on element " + by);
+    }
 
     public static String getElementText(By by) {
         waitForElementVisible(by);
