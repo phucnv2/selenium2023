@@ -1,5 +1,6 @@
 package com.anhtester.pages.NewUser;
 
+import com.anhtester.helpers.ExcelHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.Select;
@@ -92,7 +93,16 @@ public class CreateUserPage {
         selectedItem(selectLanguage,language);
         clickElement(tabPermissions);
         selectedItem(rolePermissions,role);
+        saveUser(email,password,role);
         clickElement(btnSave);
+    }
+    public void saveUser(String email, String password,String role){
+        ExcelHelper excel = new ExcelHelper();
+        excel.setExcelFile("src/test/resources/dataTest/data_user.xlsx", "newuser");
+        //Ghi giá trị "pass" vào dòng 1 cột 3 (dòng và cột bắt đầu tính từ 0)
+        excel.setCellData(email, "email", 1);
+        excel.setCellData(password, "password", 1);
+        excel.setCellData(role, "role", 1);
     }
     public void verifyInvalid(String firstName,String lastName, String email, String password){
         setText(inputFirstName,firstName);

@@ -13,4 +13,7 @@ public class ConfigData {
 
     public static String SUPPER_EMAIL = PropertiesHelper.getValue("supper_email");
     public static String SUPPER_PASSWORD = PropertiesHelper.getValue("supper_password");
+
+    public static String ADD_USER_EMAIL = PropertiesHelper.getValue("emailUser");
+    public static String ADD_USER_PASSWORD = PropertiesHelper.getValue("password");
 }

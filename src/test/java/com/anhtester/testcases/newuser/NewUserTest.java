@@ -110,21 +110,21 @@ public class NewUserTest extends BaseTest {
         loginPage.verifyLoginSuccess();
     }
     @Test
-    public void uploadImage(){
+    public void uploadImageTest(){
         loginPage = new LoginPage();
         dashboardPage = loginPage.loginCRM(ConfigData.SUPPER_EMAIL, ConfigData.SUPPER_PASSWORD);
         loginPage.verifyLoginSuccess();
         createUserPage = dashboardPage.clickMenuSetup();
         createUserPage.clickMenuStaff();
         createUserPage.clickNewStaffMember();
-        createUserPage.insertInfomtionUser_1("firstName","lastName","phuc1234@gmail.com","0965339606","1", "Vietnamese","Admin Example");
+        createUserPage.insertInfomtionUser_1("Nguyễn Văn","Phúc","phuctho1996@gmail.com","0965339606","1", "Vietnamese","Admin Example");
         createUserPage.verifyCreateUserSuccess();
         sleep(3);
         logoutPage = new LogoutPage();
         logoutPage.clickAdminIcon();
         logoutPage.clickLogoutButton();
         loginPage = new LoginPage();
-        dashboardPage = loginPage.loginCRM("phuc1234@gmail.com","1");
+        dashboardPage = loginPage.loginCRM(ConfigData.ADD_USER_EMAIL, ConfigData.ADD_USER_PASSWORD); //????
         loginPage.verifyLoginSuccess();
         sleep(3);
     }
